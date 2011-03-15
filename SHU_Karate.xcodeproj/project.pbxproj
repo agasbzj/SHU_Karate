@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A960540D13234826001FAD50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A960540C13234826001FAD50 /* UIKit.framework */; };
+		A960540F13234826001FAD50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A960540E13234826001FAD50 /* Foundation.framework */; };
+		A960541713234826001FAD50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A960541513234826001FAD50 /* InfoPlist.strings */; };
+		A960541A13234826001FAD50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A960541913234826001FAD50 /* main.m */; };
+		A960541D13234826001FAD50 /* SHU_KarateAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A960541C13234826001FAD50 /* SHU_KarateAppDelegate.m */; };
+		A960542013234827001FAD50 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A960541E13234827001FAD50 /* MainWindow.xib */; };
+		A960543313234827001FAD50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A960540C13234826001FAD50 /* UIKit.framework */; };
+		A960543413234827001FAD50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A960540E13234826001FAD50 /* Foundation.framework */; };
+		A960543513234827001FAD50 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A960541013234826001FAD50 /* CoreGraphics.framework */; };
+		A960543D13234827001FAD50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A960543B13234827001FAD50 /* InfoPlist.strings */; };
+		A960544013234827001FAD50 /* SHU_KarateTests.h in Resources */ = {isa = PBXBuildFile; fileRef = A960543F13234827001FAD50 /* SHU_KarateTests.h */; };
+		A960544213234827001FAD50 /* SHU_KarateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A960544113234827001FAD50 /* SHU_KarateTests.m */; };
+		A960545713235811001FAD50 /* CommunityNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A960545613235811001FAD50 /* CommunityNavigationController.m */; };
+		A960546313236677001FAD50 /* CommunityRootTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A960546213236676001FAD50 /* CommunityRootTableCell.m */; };
+		A960546B13236C0A001FAD50 /* CommunityRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A960546913236C07001FAD50 /* CommunityRootViewController.m */; };
+		A960546C13236C0A001FAD50 /* CommunityRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A960546A13236C08001FAD50 /* CommunityRootViewController.xib */; };
+		A960546F13236F27001FAD50 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A960546E13236F27001FAD50 /* icon.png */; };
+		A96054781323829C001FAD50 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = A96054771323829B001FAD50 /* Data.plist */; };
+		A960547A13238934001FAD50 /* CommunityRootTabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A960547913238933001FAD50 /* CommunityRootTabelCell.xib */; };
+		A9E527B1132F192F0004B1F0 /* DojoRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E527B0132F192F0004B1F0 /* DojoRootViewController.m */; };
+		A9E527B3132F1B690004B1F0 /* DojoRootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E527B2132F1B690004B1F0 /* DojoRootView.xib */; };
+		A9E527C3132F4C420004B1F0 /* DojoSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E527C1132F4C420004B1F0 /* DojoSelectViewController.m */; };
+		A9E527C4132F4C420004B1F0 /* DojoSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E527C2132F4C420004B1F0 /* DojoSelectViewController.xib */; };
+		A9E527C6132F510C0004B1F0 /* DojoData.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9E527C5132F510B0004B1F0 /* DojoData.plist */; };
+		A9E527C8132F56040004B1F0 /* Dojos.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9E527C7132F56040004B1F0 /* Dojos.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A960543613234827001FAD50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A96053FF13234826001FAD50 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A960540713234826001FAD50;
+			remoteInfo = SHU_Karate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A960540813234826001FAD50 /* SHU_Karate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHU_Karate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A960540C13234826001FAD50 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A960540E13234826001FAD50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A960541013234826001FAD50 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A960541413234826001FAD50 /* SHU_Karate-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SHU_Karate-Info.plist"; sourceTree = "<group>"; };
+		A960541613234826001FAD50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A960541813234826001FAD50 /* SHU_Karate-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SHU_Karate-Prefix.pch"; sourceTree = "<group>"; };
+		A960541913234826001FAD50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A960541B13234826001FAD50 /* SHU_KarateAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHU_KarateAppDelegate.h; sourceTree = "<group>"; };
+		A960541C13234826001FAD50 /* SHU_KarateAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHU_KarateAppDelegate.m; sourceTree = "<group>"; };
+		A960541F13234827001FAD50 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		A960543213234827001FAD50 /* SHU_KarateTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHU_KarateTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A960543A13234827001FAD50 /* SHU_KarateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SHU_KarateTests-Info.plist"; sourceTree = "<group>"; };
+		A960543C13234827001FAD50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A960543E13234827001FAD50 /* SHU_KarateTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SHU_KarateTests-Prefix.pch"; sourceTree = "<group>"; };
+		A960543F13234827001FAD50 /* SHU_KarateTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHU_KarateTests.h; sourceTree = "<group>"; };
+		A960544113234827001FAD50 /* SHU_KarateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHU_KarateTests.m; sourceTree = "<group>"; };
+		A960545513235811001FAD50 /* CommunityNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityNavigationController.h; sourceTree = "<group>"; };
+		A960545613235811001FAD50 /* CommunityNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityNavigationController.m; sourceTree = "<group>"; };
+		A960546113236676001FAD50 /* CommunityRootTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityRootTableCell.h; sourceTree = "<group>"; };
+		A960546213236676001FAD50 /* CommunityRootTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityRootTableCell.m; sourceTree = "<group>"; };
+		A960546813236C07001FAD50 /* CommunityRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityRootViewController.h; sourceTree = "<group>"; };
+		A960546913236C07001FAD50 /* CommunityRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityRootViewController.m; sourceTree = "<group>"; };
+		A960546A13236C08001FAD50 /* CommunityRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityRootViewController.xib; sourceTree = "<group>"; };
+		A960546E13236F27001FAD50 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		A96054771323829B001FAD50 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+		A960547913238933001FAD50 /* CommunityRootTabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityRootTabelCell.xib; sourceTree = "<group>"; };
+		A9E527AF132F192F0004B1F0 /* DojoRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DojoRootViewController.h; sourceTree = "<group>"; };
+		A9E527B0132F192F0004B1F0 /* DojoRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DojoRootViewController.m; sourceTree = "<group>"; };
+		A9E527B2132F1B690004B1F0 /* DojoRootView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DojoRootView.xib; sourceTree = "<group>"; };
+		A9E527C0132F4C420004B1F0 /* DojoSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DojoSelectViewController.h; sourceTree = "<group>"; };
+		A9E527C1132F4C420004B1F0 /* DojoSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DojoSelectViewController.m; sourceTree = "<group>"; };
+		A9E527C2132F4C420004B1F0 /* DojoSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DojoSelectViewController.xib; sourceTree = "<group>"; };
+		A9E527C5132F510B0004B1F0 /* DojoData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DojoData.plist; sourceTree = "<group>"; };
+		A9E527C7132F56040004B1F0 /* Dojos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dojos.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A960540513234826001FAD50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A960540D13234826001FAD50 /* UIKit.framework in Frameworks */,
+				A960540F13234826001FAD50 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A960542E13234827001FAD50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A960543313234827001FAD50 /* UIKit.framework in Frameworks */,
+				A960543413234827001FAD50 /* Foundation.framework in Frameworks */,
+				A960543513234827001FAD50 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A96053FD13234826001FAD50 = {
+			isa = PBXGroup;
+			children = (
+				A960541213234826001FAD50 /* SHU_Karate */,
+				A960543813234827001FAD50 /* SHU_KarateTests */,
+				A960540B13234826001FAD50 /* Frameworks */,
+				A960540913234826001FAD50 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A960540913234826001FAD50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A960540813234826001FAD50 /* SHU_Karate.app */,
+				A960543213234827001FAD50 /* SHU_KarateTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A960540B13234826001FAD50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A960540C13234826001FAD50 /* UIKit.framework */,
+				A960540E13234826001FAD50 /* Foundation.framework */,
+				A960541013234826001FAD50 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A960541213234826001FAD50 /* SHU_Karate */ = {
+			isa = PBXGroup;
+			children = (
+				A960546D13236EF2001FAD50 /* Resources */,
+				A960546013235EB3001FAD50 /* Community */,
+				A9E527AE132F18C80004B1F0 /* Dojo */,
+				A960541B13234826001FAD50 /* SHU_KarateAppDelegate.h */,
+				A960541C13234826001FAD50 /* SHU_KarateAppDelegate.m */,
+				A960541E13234827001FAD50 /* MainWindow.xib */,
+				A960541313234826001FAD50 /* Supporting Files */,
+			);
+			path = SHU_Karate;
+			sourceTree = "<group>";
+		};
+		A960541313234826001FAD50 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A960541413234826001FAD50 /* SHU_Karate-Info.plist */,
+				A960541513234826001FAD50 /* InfoPlist.strings */,
+				A960541813234826001FAD50 /* SHU_Karate-Prefix.pch */,
+				A960541913234826001FAD50 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A960543813234827001FAD50 /* SHU_KarateTests */ = {
+			isa = PBXGroup;
+			children = (
+				A960543F13234827001FAD50 /* SHU_KarateTests.h */,
+				A960544113234827001FAD50 /* SHU_KarateTests.m */,
+				A960543913234827001FAD50 /* Supporting Files */,
+			);
+			path = SHU_KarateTests;
+			sourceTree = "<group>";
+		};
+		A960543913234827001FAD50 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A960543A13234827001FAD50 /* SHU_KarateTests-Info.plist */,
+				A960543B13234827001FAD50 /* InfoPlist.strings */,
+				A960543E13234827001FAD50 /* SHU_KarateTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A960546013235EB3001FAD50 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				A96054771323829B001FAD50 /* Data.plist */,
+				A960545513235811001FAD50 /* CommunityNavigationController.h */,
+				A960545613235811001FAD50 /* CommunityNavigationController.m */,
+				A960546113236676001FAD50 /* CommunityRootTableCell.h */,
+				A960546213236676001FAD50 /* CommunityRootTableCell.m */,
+				A960546813236C07001FAD50 /* CommunityRootViewController.h */,
+				A960546913236C07001FAD50 /* CommunityRootViewController.m */,
+				A960547913238933001FAD50 /* CommunityRootTabelCell.xib */,
+				A960546A13236C08001FAD50 /* CommunityRootViewController.xib */,
+			);
+			name = Community;
+			sourceTree = "<group>";
+		};
+		A960546D13236EF2001FAD50 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A960546E13236F27001FAD50 /* icon.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A9E527AE132F18C80004B1F0 /* Dojo */ = {
+			isa = PBXGroup;
+			children = (
+				A9E527C5132F510B0004B1F0 /* DojoData.plist */,
+				A9E527AF132F192F0004B1F0 /* DojoRootViewController.h */,
+				A9E527B0132F192F0004B1F0 /* DojoRootViewController.m */,
+				A9E527B2132F1B690004B1F0 /* DojoRootView.xib */,
+				A9E527C0132F4C420004B1F0 /* DojoSelectViewController.h */,
+				A9E527C1132F4C420004B1F0 /* DojoSelectViewController.m */,
+				A9E527C2132F4C420004B1F0 /* DojoSelectViewController.xib */,
+				A9E527C7132F56040004B1F0 /* Dojos.plist */,
+			);
+			name = Dojo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A960540713234826001FAD50 /* SHU_Karate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A960544513234827001FAD50 /* Build configuration list for PBXNativeTarget "SHU_Karate" */;
+			buildPhases = (
+				A960540413234826001FAD50 /* Sources */,
+				A960540513234826001FAD50 /* Frameworks */,
+				A960540613234826001FAD50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SHU_Karate;
+			productName = SHU_Karate;
+			productReference = A960540813234826001FAD50 /* SHU_Karate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A960543113234827001FAD50 /* SHU_KarateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A960544813234827001FAD50 /* Build configuration list for PBXNativeTarget "SHU_KarateTests" */;
+			buildPhases = (
+				A960542D13234827001FAD50 /* Sources */,
+				A960542E13234827001FAD50 /* Frameworks */,
+				A960542F13234827001FAD50 /* Resources */,
+				A960543013234827001FAD50 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A960543713234827001FAD50 /* PBXTargetDependency */,
+			);
+			name = SHU_KarateTests;
+			productName = SHU_KarateTests;
+			productReference = A960543213234827001FAD50 /* SHU_KarateTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A96053FF13234826001FAD50 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = A960540213234826001FAD50 /* Build configuration list for PBXProject "SHU_Karate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				"zh-Hans",
+			);
+			mainGroup = A96053FD13234826001FAD50;
+			productRefGroup = A960540913234826001FAD50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A960540713234826001FAD50 /* SHU_Karate */,
+				A960543113234827001FAD50 /* SHU_KarateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A960540613234826001FAD50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A960541713234826001FAD50 /* InfoPlist.strings in Resources */,
+				A960542013234827001FAD50 /* MainWindow.xib in Resources */,
+				A960546C13236C0A001FAD50 /* CommunityRootViewController.xib in Resources */,
+				A960546F13236F27001FAD50 /* icon.png in Resources */,
+				A96054781323829C001FAD50 /* Data.plist in Resources */,
+				A960547A13238934001FAD50 /* CommunityRootTabelCell.xib in Resources */,
+				A9E527B3132F1B690004B1F0 /* DojoRootView.xib in Resources */,
+				A9E527C4132F4C420004B1F0 /* DojoSelectViewController.xib in Resources */,
+				A9E527C6132F510C0004B1F0 /* DojoData.plist in Resources */,
+				A9E527C8132F56040004B1F0 /* Dojos.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A960542F13234827001FAD50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A960543D13234827001FAD50 /* InfoPlist.strings in Resources */,
+				A960544013234827001FAD50 /* SHU_KarateTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A960543013234827001FAD50 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A960540413234826001FAD50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A960541A13234826001FAD50 /* main.m in Sources */,
+				A960541D13234826001FAD50 /* SHU_KarateAppDelegate.m in Sources */,
+				A960545713235811001FAD50 /* CommunityNavigationController.m in Sources */,
+				A960546313236677001FAD50 /* CommunityRootTableCell.m in Sources */,
+				A960546B13236C0A001FAD50 /* CommunityRootViewController.m in Sources */,
+				A9E527B1132F192F0004B1F0 /* DojoRootViewController.m in Sources */,
+				A9E527C3132F4C420004B1F0 /* DojoSelectViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A960542D13234827001FAD50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A960544213234827001FAD50 /* SHU_KarateTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A960543713234827001FAD50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A960540713234826001FAD50 /* SHU_Karate */;
+			targetProxy = A960543613234827001FAD50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A960541513234826001FAD50 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A960541613234826001FAD50 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A960541E13234827001FAD50 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A960541F13234827001FAD50 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		A960543B13234827001FAD50 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A960543C13234827001FAD50 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A960544313234827001FAD50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A960544413234827001FAD50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		A960544613234827001FAD50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SHU_Karate/SHU_Karate-Prefix.pch";
+				INFOPLIST_FILE = "SHU_Karate/SHU_Karate-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A960544713234827001FAD50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SHU_Karate/SHU_Karate-Prefix.pch";
+				INFOPLIST_FILE = "SHU_Karate/SHU_Karate-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A960544913234827001FAD50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SHU_Karate.app/SHU_Karate";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SHU_KarateTests/SHU_KarateTests-Prefix.pch";
+				INFOPLIST_FILE = "SHU_KarateTests/SHU_KarateTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A960544A13234827001FAD50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SHU_Karate.app/SHU_Karate";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SHU_KarateTests/SHU_KarateTests-Prefix.pch";
+				INFOPLIST_FILE = "SHU_KarateTests/SHU_KarateTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A960540213234826001FAD50 /* Build configuration list for PBXProject "SHU_Karate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A960544313234827001FAD50 /* Debug */,
+				A960544413234827001FAD50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A960544513234827001FAD50 /* Build configuration list for PBXNativeTarget "SHU_Karate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A960544613234827001FAD50 /* Debug */,
+				A960544713234827001FAD50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A960544813234827001FAD50 /* Build configuration list for PBXNativeTarget "SHU_KarateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A960544913234827001FAD50 /* Debug */,
+				A960544A13234827001FAD50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A96053FF13234826001FAD50 /* Project object */;
+}

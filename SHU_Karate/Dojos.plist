@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>上海大学道场</key>
+	<array>
+		<array>
+			<string>宝山校区道场</string>
+			<string>上海大学宝山校区体育馆</string>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string>延长校区道场</string>
+			<string>延长校区体育馆</string>
+			<string></string>
+			<string></string>
+		</array>
+		<array>
+			<string>嘉定校区道场</string>
+			<string>嘉定校区舞蹈房</string>
+			<string></string>
+			<string></string>
+		</array>
+	</array>
+	<key>上海政法大学道场</key>
+	<array>
+		<array>
+			<string>青浦校区道场</string>
+			<string>体育馆</string>
+			<string></string>
+			<string></string>
+		</array>
+	</array>
+	<key>社会道场</key>
+	<array>
+		<array>
+			<string>南站</string>
+			<string>龙茗路</string>
+			<string>宝山校区</string>
+			<string></string>
+		</array>
+		<array>
+			<string></string>
+			<string></string>
+			<string>延长校区</string>
+			<string></string>
+		</array>
+	</array>
+</dict>
+</plist>
