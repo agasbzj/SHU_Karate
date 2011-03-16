@@ -11,8 +11,13 @@
 
 @implementation DojoMapViewController
 @synthesize mapView;
-@synthesize dojoListsNavigationController;
+@synthesize theDojo;
 
+- (void)viewDidLoad
+{
+
+    [super viewDidLoad];
+}
 - (IBAction)setMapStyle:(id)sender
 {
     switch (((UISegmentedControl *)sender).selectedSegmentIndex)
@@ -27,11 +32,11 @@
             mapView.mapType = MKMapTypeSatellite;
             break;
         } 
-        default:
-        {
-            mapView.mapType = MKMapTypeHybrid;
-            break;
-        } 
+//        default:
+//        {
+//            mapView.mapType = MKMapTypeHybrid;
+//            break;
+//        } 
     }
 
 }
@@ -47,7 +52,6 @@
 - (void)dealloc
 {
     [mapView release];
-    [dojoListsNavigationController release];
     [super dealloc];
 }
 
@@ -61,15 +65,16 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    self.mapView = nil;
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
+//- (void)viewDidLoad
+//{
+//    self.mapView = nil;
+//    [super viewDidLoad];
+//    // Do any additional setup after loading the view from its nib.
+//}
 
 - (void)viewDidUnload
 {
+    self.mapView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -99,8 +104,9 @@
 
 - (void)DojoSelectViewController:(DojoSelectViewController *)controller didChooseDojo:(Dojos *)aDojo
 {
-    [self.navigationController dismissModalViewControllerAnimated:YES];
+
     self.title = aDojo.name;
+
     MKCoordinateRegion current = mapView.region;
     if (current.span.latitudeDelta < 10)
     {

@@ -8,25 +8,27 @@
 
 #import <UIKit/UIKit.h>
 #import "Dojos.h"
-#import "DojoMapViewController.h"
 
+@class DojoMapViewController;
 @protocol DojoSelectViewControllerDelegate;
-@interface DojoSelectViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+
+@interface DojoSelectViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>{
     
     UITableView *tableView;
    
     NSArray *groupKeys;
     NSDictionary *names;
-    //DojoMapViewController *mapViewController;
+    DojoMapViewController *mapViewController;
     id <DojoSelectViewControllerDelegate> delegate;
     NSMutableArray *dojoList;
+    UINavigationController *dojoListNavigationController;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 @property (nonatomic, retain) NSMutableArray *dojoList;
 @property (nonatomic, retain) NSArray *groupKeys;
 @property (nonatomic, retain) NSDictionary *names;
-
+@property (nonatomic, retain) UINavigationController *dojoListNavigationController;
 @end
 
 @protocol DojoSelectViewControllerDelegate

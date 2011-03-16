@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A925AF3E132F902B0045171D /* DojoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A925AF3C132F902B0045171D /* DojoMapViewController.m */; };
 		A925AF3F132F902B0045171D /* DojoMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A925AF3D132F902B0045171D /* DojoMapViewController.xib */; };
-		A925AF42132F90470045171D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A925AF41132F90470045171D /* MapKit.framework */; };
 		A925AF55132FA1410045171D /* Dojos.m in Sources */ = {isa = PBXBuildFile; fileRef = A925AF54132FA13F0045171D /* Dojos.m */; };
 		A960540D13234826001FAD50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A960540C13234826001FAD50 /* UIKit.framework */; };
 		A960540F13234826001FAD50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A960540E13234826001FAD50 /* Foundation.framework */; };
@@ -30,6 +29,8 @@
 		A96054781323829C001FAD50 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = A96054771323829B001FAD50 /* Data.plist */; };
 		A960547A13238934001FAD50 /* CommunityRootTabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A960547913238933001FAD50 /* CommunityRootTabelCell.xib */; };
 		A9978A6C13305938005A54AF /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9978A6B13305938005A54AF /* MainWindow.xib */; };
+		A9978A7813306475005A54AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9978A7713306475005A54AF /* MapKit.framework */; };
+		A9978A7A13306B47005A54AF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9978A7913306B47005A54AF /* CoreData.framework */; };
 		A9E527C3132F4C420004B1F0 /* DojoSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E527C1132F4C420004B1F0 /* DojoSelectViewController.m */; };
 		A9E527C4132F4C420004B1F0 /* DojoSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E527C2132F4C420004B1F0 /* DojoSelectViewController.xib */; };
 		A9E527C8132F56040004B1F0 /* Dojos.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9E527C7132F56040004B1F0 /* Dojos.plist */; };
@@ -49,7 +50,6 @@
 		A925AF3B132F902B0045171D /* DojoMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DojoMapViewController.h; sourceTree = "<group>"; };
 		A925AF3C132F902B0045171D /* DojoMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DojoMapViewController.m; sourceTree = "<group>"; };
 		A925AF3D132F902B0045171D /* DojoMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DojoMapViewController.xib; sourceTree = "<group>"; };
-		A925AF41132F90470045171D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapKit.framework; sourceTree = "<group>"; };
 		A925AF53132FA13F0045171D /* Dojos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dojos.h; sourceTree = "<group>"; };
 		A925AF54132FA13F0045171D /* Dojos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dojos.m; sourceTree = "<group>"; };
 		A960540813234826001FAD50 /* SHU_Karate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHU_Karate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +79,8 @@
 		A96054771323829B001FAD50 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 		A960547913238933001FAD50 /* CommunityRootTabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityRootTabelCell.xib; sourceTree = "<group>"; };
 		A9978A6B13305938005A54AF /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = SHU_Karate/MainWindow.xib; sourceTree = "<group>"; };
+		A9978A7713306475005A54AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A9978A7913306B47005A54AF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A9E527C0132F4C420004B1F0 /* DojoSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DojoSelectViewController.h; sourceTree = "<group>"; };
 		A9E527C1132F4C420004B1F0 /* DojoSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DojoSelectViewController.m; sourceTree = "<group>"; };
 		A9E527C2132F4C420004B1F0 /* DojoSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DojoSelectViewController.xib; sourceTree = "<group>"; };
@@ -90,9 +92,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9978A7A13306B47005A54AF /* CoreData.framework in Frameworks */,
+				A9978A7813306475005A54AF /* MapKit.framework in Frameworks */,
 				A960540D13234826001FAD50 /* UIKit.framework in Frameworks */,
 				A960540F13234826001FAD50 /* Foundation.framework in Frameworks */,
-				A925AF42132F90470045171D /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +135,8 @@
 		A960540B13234826001FAD50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A925AF41132F90470045171D /* MapKit.framework */,
+				A9978A7913306B47005A54AF /* CoreData.framework */,
+				A9978A7713306475005A54AF /* MapKit.framework */,
 				A960540C13234826001FAD50 /* UIKit.framework */,
 				A960540E13234826001FAD50 /* Foundation.framework */,
 				A960541013234826001FAD50 /* CoreGraphics.framework */,

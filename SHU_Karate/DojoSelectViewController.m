@@ -7,7 +7,7 @@
 //
 
 #import "DojoSelectViewController.h"
-
+#import "DojoMapViewController.h"
 
 @implementation DojoSelectViewController
 @synthesize  tableView, groupKeys, names, dojoList;
@@ -39,10 +39,10 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [tableView reloadData];
-}
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [tableView reloadData];
+//}
 
 - (void)viewDidLoad
 {
@@ -103,7 +103,7 @@
     }
     NSDictionary *tmp = [nameSection objectAtIndex:row];
     cell.textLabel.text = [tmp objectForKey:@"Name"];
-    cell.detailTextLabel.text = [tmp objectForKey:@"Location"];
+    cell.detailTextLabel.text = [tmp objectForKey:@"Position"];
    
     return cell;
 }
@@ -122,16 +122,35 @@
     NSString *key = [groupKeys objectAtIndex:section];
     NSArray *nameSection = [names objectForKey:key];
     NSDictionary *tmp = [nameSection objectAtIndex:row];
-    Dojos *theDojo = [[Dojos alloc] init];
+    Dojos *theDojo = [[[Dojos alloc] init] autorelease];
     theDojo.name = [tmp objectForKey:@"Name"];
     theDojo.latitude = [tmp objectForKey:@"Latitude"];
     theDojo.longitude = [tmp objectForKey:@"Longitude"];
     [delegate DojoSelectViewController:self didChooseDojo:theDojo];
-    [theDojo release];
+
     
-    DojoMapViewController *mapViewController = [[DojoMapViewController alloc] init];
-    [self.view removeFromSuperview];
-    [self.view insertSubview:mapViewController.view atIndex:0];
+    DojoMapViewController *mapView = [[[DojoMapViewController alloc] init] autorelease];
+    mapViewController = mapView;
+    [self.navigationController pushViewController:mapViewController animated:YES];
+
 }
+//- (DojoMapViewController *)mapViewController
+//{
+//    if (mapViewController == nil)
+//    {
+//        mapViewController = [[DojoMapViewController alloc] init];
+//        //mapViewController.delegate = self;
+//        mapViewController.title = @"Choose a city:";
+//    }
+//    return mapViewController;
+//}
+//- (UINavigationController *)dojoListNavigationController
+//{
+//    if (dojoListNavigationController == nil)
+//    {
+//        dojoListNavigationController = [[UINavigationController alloc] initWithRootViewController:self.dojoListNavigationController];
+//    }
+//    return dojoListNavigationController;
+//}
 
 @end

@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "DojoSelectViewController.h"
-@interface DojoMapViewController : UIViewController <MKMapViewDelegate>{
+@interface DojoMapViewController : UIViewController <MKMapViewDelegate, DojoSelectViewControllerDelegate>{
     MKMapView *mapView;
-    UINavigationController *dojoListsNavigationController;
+    Dojos *theDojo;
 }
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
-@property (nonatomic, retain) UINavigationController *dojoListsNavigationController;
+@property (nonatomic, retain) Dojos *theDojo;
 
 - (IBAction)setMapStyle:(id)sender;
 
