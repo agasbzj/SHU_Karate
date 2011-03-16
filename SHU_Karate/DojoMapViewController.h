@@ -18,5 +18,5 @@
 @property (nonatomic, retain) Dojos *theDojo;
 
 - (IBAction)setMapStyle:(id)sender;
-
+- (void)startLacating:(Dojos *)aDojo;
 @end

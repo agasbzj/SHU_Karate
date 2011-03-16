@@ -6,31 +6,31 @@
 	<array>
 		<dict>
 			<key>Latitude</key>
-			<string>-33.860</string>
+			<string>31.321311</string>
 			<key>Position</key>
 			<string>上海大学宝山校区体育馆</string>
 			<key>Longitude</key>
-			<string>151.211</string>
+			<string>121.390064</string>
 			<key>Name</key>
 			<string>宝山校区道场</string>
 		</dict>
 		<dict>
 			<key>Latitude</key>
-			<string></string>
+			<string>31.277422</string>
 			<key>Position</key>
 			<string>延长校区体育馆</string>
 			<key>Longitude</key>
-			<string></string>
+			<string>121.451926</string>
 			<key>Name</key>
 			<string>延长校区道场</string>
 		</dict>
 		<dict>
 			<key>Latitude</key>
-			<string></string>
+			<string>31.380381</string>
 			<key>Position</key>
-			<string>嘉定校区舞蹈房</string>
+			<string>嘉定校区体育馆</string>
 			<key>Longitude</key>
-			<string></string>
+			<string>121.244320</string>
 			<key>Name</key>
 			<string>嘉定校区道场</string>
 		</dict>
@@ -39,11 +39,11 @@
 	<array>
 		<dict>
 			<key>Latitude</key>
-			<string></string>
+			<string>31.111459</string>
 			<key>Position</key>
-			<string>体育馆</string>
+			<string>上海政法体育馆</string>
 			<key>Longitude</key>
-			<string></string>
+			<string>121.168432</string>
 			<key>Name</key>
 			<string>青浦校区道场</string>
 		</dict>

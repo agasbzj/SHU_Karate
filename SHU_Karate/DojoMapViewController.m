@@ -13,11 +13,7 @@
 @synthesize mapView;
 @synthesize theDojo;
 
-- (void)viewDidLoad
-{
 
-    [super viewDidLoad];
-}
 - (IBAction)setMapStyle:(id)sender
 {
     switch (((UISegmentedControl *)sender).selectedSegmentIndex)
@@ -64,14 +60,11 @@
 }
 
 #pragma mark - View lifecycle
-
-//- (void)viewDidLoad
-//{
-//    self.mapView = nil;
-//    [super viewDidLoad];
-//    // Do any additional setup after loading the view from its nib.
-//}
-
+- (void)viewDidLoad
+{
+    [self startLacating:theDojo];
+    [super viewDidLoad];
+}
 - (void)viewDidUnload
 {
     self.mapView = nil;
@@ -97,9 +90,26 @@
 {
     MKCoordinateRegion region;
     region.center = aDojo.coordinate;
-    MKCoordinateSpan span = {0.4, 0.4};
+    MKCoordinateSpan span = {0.007, 0.007}; //缩放大小
     region.span = span;
     [mapView setRegion:region animated:YES];
+}
+
+- (void)startLacating:(Dojos *)aDojo
+{
+    self.title = aDojo.name;
+    
+    MKCoordinateRegion current = mapView.region;
+    if (current.span.latitudeDelta < 10)
+    {
+        [self performSelector:@selector(animateToWorld:) withObject:aDojo afterDelay:0.3];
+        [self performSelector:@selector(animateToPlace:) withObject:aDojo afterDelay:1.7];        
+    }
+    else
+    {
+        [self performSelector:@selector(animateToPlace:) withObject:aDojo afterDelay:0.3];        
+    }
+
 }
 
 - (void)DojoSelectViewController:(DojoSelectViewController *)controller didChooseDojo:(Dojos *)aDojo

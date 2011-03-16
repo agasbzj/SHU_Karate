@@ -29,6 +29,7 @@
 @property (nonatomic, retain) NSArray *groupKeys;
 @property (nonatomic, retain) NSDictionary *names;
 @property (nonatomic, retain) UINavigationController *dojoListNavigationController;
+@property (nonatomic, retain) DojoMapViewController *mapViewController;
 @end
 
 @protocol DojoSelectViewControllerDelegate

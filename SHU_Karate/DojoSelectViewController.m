@@ -11,7 +11,7 @@
 
 @implementation DojoSelectViewController
 @synthesize  tableView, groupKeys, names, dojoList;
-
+@synthesize mapViewController;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -23,6 +23,7 @@
 
 - (void)dealloc
 {
+    [mapViewController release];
     [tableView release];
     [names release];
     [groupKeys release];
@@ -126,21 +127,27 @@
     theDojo.name = [tmp objectForKey:@"Name"];
     theDojo.latitude = [tmp objectForKey:@"Latitude"];
     theDojo.longitude = [tmp objectForKey:@"Longitude"];
+    
     [delegate DojoSelectViewController:self didChooseDojo:theDojo];
 
     
     DojoMapViewController *mapView = [[[DojoMapViewController alloc] init] autorelease];
+    mapView.title = theDojo.name;
+    mapView.theDojo = theDojo;
     mapViewController = mapView;
     [self.navigationController pushViewController:mapViewController animated:YES];
+    
+//    [self.navigationController presentModalViewController:self.mapViewController animated:YES];
 
 }
+
 //- (DojoMapViewController *)mapViewController
 //{
 //    if (mapViewController == nil)
 //    {
 //        mapViewController = [[DojoMapViewController alloc] init];
 //        //mapViewController.delegate = self;
-//        mapViewController.title = @"Choose a city:";
+//        //mapViewController.title = @"Choose a city:";
 //    }
 //    return mapViewController;
 //}
