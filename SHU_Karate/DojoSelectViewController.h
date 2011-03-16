@@ -7,20 +7,30 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import <MapKit/MapKit.h>
+#import "Dojos.h"
+#import "DojoMapViewController.h"
 
+@protocol DojoSelectViewControllerDelegate;
 @interface DojoSelectViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
-    //MKPlacemark *placeMark;
+    
     UITableView *tableView;
-    UIBarButtonItem *selectButton;
+   
     NSArray *groupKeys;
     NSDictionary *names;
-    
+    //DojoMapViewController *mapViewController;
+    id <DojoSelectViewControllerDelegate> delegate;
+    NSMutableArray *dojoList;
 }
-//@property (nonatomic, retain) MKPlacemark *placeMark;
+
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *selectButton;
+@property (nonatomic, retain) NSMutableArray *dojoList;
 @property (nonatomic, retain) NSArray *groupKeys;
 @property (nonatomic, retain) NSDictionary *names;
-- (IBAction)done;
+
+@end
+
+@protocol DojoSelectViewControllerDelegate
+
+- (void)DojoSelectViewController:(DojoSelectViewController *)controller didChooseDojo:(Dojos *)aDojo;
+
 @end

@@ -4,48 +4,72 @@
 <dict>
 	<key>上海大学道场</key>
 	<array>
-		<array>
+		<dict>
+			<key>Name</key>
 			<string>宝山校区道场</string>
+			<key>Location</key>
 			<string>上海大学宝山校区体育馆</string>
+			<key>Latitude</key>
 			<string></string>
+			<key>Longitude</key>
 			<string></string>
-		</array>
-		<array>
+		</dict>
+		<dict>
+			<key>Name</key>
 			<string>延长校区道场</string>
+			<key>Location</key>
 			<string>延长校区体育馆</string>
+			<key>Latitude</key>
 			<string></string>
+			<key>Longitude</key>
 			<string></string>
-		</array>
-		<array>
+		</dict>
+		<dict>
+			<key>Name</key>
 			<string>嘉定校区道场</string>
+			<key>Location</key>
 			<string>嘉定校区舞蹈房</string>
+			<key>Latitude</key>
 			<string></string>
+			<key>Longitude</key>
 			<string></string>
-		</array>
+		</dict>
 	</array>
 	<key>上海政法大学道场</key>
 	<array>
-		<array>
+		<dict>
+			<key>Name</key>
 			<string>青浦校区道场</string>
+			<key>Location</key>
 			<string>体育馆</string>
+			<key>Latitude</key>
 			<string></string>
+			<key>Longitude</key>
 			<string></string>
-		</array>
+		</dict>
 	</array>
 	<key>社会道场</key>
 	<array>
-		<array>
+		<dict>
+			<key>Name</key>
 			<string>南站</string>
+			<key>Location</key>
 			<string>龙茗路</string>
+			<key>Latitude</key>
 			<string>宝山校区</string>
+			<key>Longitude</key>
 			<string></string>
-		</array>
-		<array>
+		</dict>
+		<dict>
+			<key>Name</key>
 			<string></string>
+			<key>Location</key>
 			<string></string>
+			<key>Latitude</key>
 			<string>延长校区</string>
+			<key>Longitude</key>
 			<string></string>
-		</array>
+		</dict>
 	</array>
 </dict>
 </plist>

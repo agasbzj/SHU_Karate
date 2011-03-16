@@ -10,7 +10,7 @@
 
 
 @implementation DojoSelectViewController
-@synthesize  tableView, selectButton, groupKeys, names;
+@synthesize  tableView, groupKeys, names, dojoList;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,8 +24,6 @@
 - (void)dealloc
 {
     [tableView release];
-    //[placeMark release];
-    [selectButton release];
     [names release];
     [groupKeys release];
     [super dealloc];
@@ -96,19 +94,16 @@
     
     NSString *key = [groupKeys objectAtIndex:section];
     NSArray *nameSection = [names objectForKey:key];
-   // NSDictionary *selected = [nameSection objectAtIndex:row];
+   
     
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        //        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+             cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
-    NSString *title = [[nameSection objectAtIndex:row] objectAtIndex:0];
-    cell.textLabel.text = title;
-    NSString *subTitle = [[nameSection objectAtIndex:row] objectAtIndex:1];
-    cell.detailTextLabel.text = subTitle;
+    NSDictionary *tmp = [nameSection objectAtIndex:row];
+    cell.textLabel.text = [tmp objectForKey:@"Name"];
+    cell.detailTextLabel.text = [tmp objectForKey:@"Location"];
    
     return cell;
 }
@@ -117,4 +112,26 @@
     NSString *key = [groupKeys objectAtIndex:section];
     return key;
 }
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSUInteger section = [indexPath section];
+    NSUInteger row = [indexPath row];
+    
+    NSString *key = [groupKeys objectAtIndex:section];
+    NSArray *nameSection = [names objectForKey:key];
+    NSDictionary *tmp = [nameSection objectAtIndex:row];
+    Dojos *theDojo = [[Dojos alloc] init];
+    theDojo.name = [tmp objectForKey:@"Name"];
+    theDojo.latitude = [tmp objectForKey:@"Latitude"];
+    theDojo.longitude = [tmp objectForKey:@"Longitude"];
+    [delegate DojoSelectViewController:self didChooseDojo:theDojo];
+    [theDojo release];
+    
+    DojoMapViewController *mapViewController = [[DojoMapViewController alloc] init];
+    [self.view removeFromSuperview];
+    [self.view insertSubview:mapViewController.view atIndex:0];
+}
+
 @end
