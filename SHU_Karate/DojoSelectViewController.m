@@ -124,20 +124,24 @@
     NSArray *nameSection = [names objectForKey:key];
     NSDictionary *tmp = [nameSection objectAtIndex:row];
     Dojos *theDojo = [[[Dojos alloc] init] autorelease];
+    
     theDojo.name = [tmp objectForKey:@"Name"];
     theDojo.latitude = [tmp objectForKey:@"Latitude"];
     theDojo.longitude = [tmp objectForKey:@"Longitude"];
+    theDojo.position = [tmp objectForKey:@"Position"];
+    theDojo.time = [tmp objectForKey:@"Time"];
     
-    [delegate DojoSelectViewController:self didChooseDojo:theDojo];
+
 
     
     DojoMapViewController *mapView = [[[DojoMapViewController alloc] init] autorelease];
     mapView.title = theDojo.name;
     mapView.theDojo = theDojo;
+
     mapViewController = mapView;
     [self.navigationController pushViewController:mapViewController animated:YES];
     
-//    [self.navigationController presentModalViewController:self.mapViewController animated:YES];
+
 
 }
 

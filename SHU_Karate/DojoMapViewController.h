@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "DojoSelectViewController.h"
-@interface DojoMapViewController : UIViewController <MKMapViewDelegate, DojoSelectViewControllerDelegate>{
+#import "DojoAnnotationController.h"
+
+
+@interface DojoMapViewController : UIViewController <MKMapViewDelegate, MKAnnotation>{
     MKMapView *mapView;
     Dojos *theDojo;
 }

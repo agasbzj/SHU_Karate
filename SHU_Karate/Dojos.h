@@ -8,15 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MKAnnotation.h>
 
-@interface Dojos : NSObject {
+@interface Dojos : NSObject <MKAnnotation>{
     CLLocationCoordinate2D coordinate;
     NSString *name;
+    NSString *position;
+    NSString *time;
     NSNumber *latitude;
     NSNumber *longitude;
     
 }
 @property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *position;
+@property (nonatomic, retain) NSString *time;
 @property (nonatomic, retain) NSNumber *latitude;
 @property (nonatomic, retain) NSNumber *longitude;
 

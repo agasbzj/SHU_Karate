@@ -10,7 +10,7 @@
 
 
 @implementation Dojos
-@synthesize name, latitude, longitude;
+@synthesize name, position, time, latitude, longitude;
 
 + (NSSet *)keyPathsForValuesAffectingCoordinate
 {
@@ -23,5 +23,28 @@
     coordinate.latitude = self.latitude.doubleValue;
     coordinate.longitude = self.longitude.doubleValue;
     return coordinate;
+}
+
+
+// required if you set the MKPinAnnotationView's "canShowCallout" property to YES
+- (NSString *)title
+{
+    return position;
+}
+
+// optional
+- (NSString *)subtitle
+{
+    return time;
+}
+
+
+
+- (void)dealloc
+{
+    [name release];
+    [position release];
+    [time release];
+    [super dealloc];
 }
 @end

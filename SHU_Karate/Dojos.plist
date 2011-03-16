@@ -7,32 +7,38 @@
 		<dict>
 			<key>Latitude</key>
 			<string>31.321311</string>
-			<key>Position</key>
-			<string>上海大学宝山校区体育馆</string>
 			<key>Longitude</key>
 			<string>121.390064</string>
 			<key>Name</key>
 			<string>宝山校区道场</string>
+			<key>Position</key>
+			<string>上海大学宝山校区体育馆</string>
+			<key>Time</key>
+			<string>训练时间：每周一、三的19:30～21:30</string>
 		</dict>
 		<dict>
 			<key>Latitude</key>
 			<string>31.277422</string>
-			<key>Position</key>
-			<string>延长校区体育馆</string>
 			<key>Longitude</key>
 			<string>121.451926</string>
 			<key>Name</key>
 			<string>延长校区道场</string>
+			<key>Position</key>
+			<string>延长校区体育馆</string>
+			<key>Time</key>
+			<string>训练时间：每周一、三的19:30～21:30</string>
 		</dict>
 		<dict>
 			<key>Latitude</key>
 			<string>31.380381</string>
-			<key>Position</key>
-			<string>嘉定校区体育馆</string>
 			<key>Longitude</key>
 			<string>121.244320</string>
 			<key>Name</key>
 			<string>嘉定校区道场</string>
+			<key>Position</key>
+			<string>嘉定校区体育馆</string>
+			<key>Time</key>
+			<string>训练时间：每周一、三的19:30～21:30</string>
 		</dict>
 	</array>
 	<key>上海政法大学道场</key>
@@ -40,12 +46,14 @@
 		<dict>
 			<key>Latitude</key>
 			<string>31.111459</string>
-			<key>Position</key>
-			<string>上海政法体育馆</string>
 			<key>Longitude</key>
 			<string>121.168432</string>
 			<key>Name</key>
 			<string>青浦校区道场</string>
+			<key>Position</key>
+			<string>上海政法体育馆</string>
+			<key>Time</key>
+			<string>训练时间：每周一、三的19:30～21:30</string>
 		</dict>
 	</array>
 	<key>社会道场</key>
@@ -53,21 +61,25 @@
 		<dict>
 			<key>Latitude</key>
 			<string>宝山校区</string>
-			<key>Position</key>
-			<string>龙茗路</string>
 			<key>Longitude</key>
 			<string></string>
 			<key>Name</key>
 			<string>南站</string>
+			<key>Position</key>
+			<string>龙茗路</string>
+			<key>Time</key>
+			<string>训练时间：每周一、三的19:30～21:30</string>
 		</dict>
 		<dict>
 			<key>Latitude</key>
 			<string>延长校区</string>
-			<key>Position</key>
-			<string></string>
 			<key>Longitude</key>
 			<string></string>
 			<key>Name</key>
+			<string></string>
+			<key>Position</key>
+			<string></string>
+			<key>Time</key>
 			<string></string>
 		</dict>
 	</array>

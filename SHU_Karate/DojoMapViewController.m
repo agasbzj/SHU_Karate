@@ -47,6 +47,7 @@
 
 - (void)dealloc
 {
+    [theDojo release];
     [mapView release];
     [super dealloc];
 }
@@ -62,8 +63,26 @@
 #pragma mark - View lifecycle
 - (void)viewDidLoad
 {
-    [self startLacating:theDojo];
     [super viewDidLoad];
+    
+//    [mapView setDelegate:self];
+    UISegmentedControl *mapStyle = [[UISegmentedControl alloc] initWithItems:
+                                            [NSArray arrayWithObjects:
+                                             @"地图",
+                                             @"卫星",
+                                             nil]];
+    [mapStyle addTarget:self action:@selector(setMapStyle:) forControlEvents:UIControlEventValueChanged];
+    mapStyle.segmentedControlStyle = UISegmentedControlStyleBar;
+
+    UIBarButtonItem *seg = [[UIBarButtonItem alloc] initWithCustomView:mapStyle];
+    [mapStyle release];
+    self.navigationItem.rightBarButtonItem = seg;
+    [seg release];
+    [self startLacating:theDojo];
+
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    [self.mapView addAnnotation:theDojo];
+    
 }
 - (void)viewDidUnload
 {
@@ -90,9 +109,10 @@
 {
     MKCoordinateRegion region;
     region.center = aDojo.coordinate;
-    MKCoordinateSpan span = {0.007, 0.007}; //缩放大小
+    MKCoordinateSpan span = {0.006, 0.006}; //缩放大小
     region.span = span;
     [mapView setRegion:region animated:YES];
+
 }
 
 - (void)startLacating:(Dojos *)aDojo

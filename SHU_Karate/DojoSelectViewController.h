@@ -10,7 +10,7 @@
 #import "Dojos.h"
 
 @class DojoMapViewController;
-@protocol DojoSelectViewControllerDelegate;
+
 
 @interface DojoSelectViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>{
     
@@ -19,7 +19,7 @@
     NSArray *groupKeys;
     NSDictionary *names;
     DojoMapViewController *mapViewController;
-    id <DojoSelectViewControllerDelegate> delegate;
+
     NSMutableArray *dojoList;
     UINavigationController *dojoListNavigationController;
 }
@@ -32,8 +32,3 @@
 @property (nonatomic, retain) DojoMapViewController *mapViewController;
 @end
 
-@protocol DojoSelectViewControllerDelegate
-
-- (void)DojoSelectViewController:(DojoSelectViewController *)controller didChooseDojo:(Dojos *)aDojo;
-
-@end
