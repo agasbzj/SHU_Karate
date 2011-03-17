@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>New item</key>
+	<dict>
+		<key>Name</key>
+		<string>平安初段</string>
+		<key>Path</key>
+		<string>平安初段.mp4</string>
+	</dict>
+	<key>New item - 2</key>
+	<dict>
+		<key>Name</key>
+		<string>平安二段</string>
+		<key>Path</key>
+		<string>平安二段.mp4</string>
+	</dict>
+	<key>New item - 3</key>
+	<dict>
+		<key>Name</key>
+		<string>平安三段</string>
+		<key>Path</key>
+		<string>平安三段.mp4</string>
+	</dict>
+	<key>New item - 4</key>
+	<dict>
+		<key>Name</key>
+		<string>平安四段</string>
+		<key>Path</key>
+		<string>平安四段.mp4</string>
+	</dict>
+	<key>New item - 5</key>
+	<dict>
+		<key>Name</key>
+		<string>平安五段</string>
+		<key>Path</key>
+		<string>平安五段.mp4</string>
+	</dict>
+</dict>
+</plist>

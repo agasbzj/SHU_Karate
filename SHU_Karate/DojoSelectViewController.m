@@ -100,7 +100,8 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-             cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     NSDictionary *tmp = [nameSection objectAtIndex:row];
     cell.textLabel.text = [tmp objectForKey:@"Name"];
@@ -141,27 +142,8 @@
     mapViewController = mapView;
     [self.navigationController pushViewController:mapViewController animated:YES];
     
-
-
 }
 
-//- (DojoMapViewController *)mapViewController
-//{
-//    if (mapViewController == nil)
-//    {
-//        mapViewController = [[DojoMapViewController alloc] init];
-//        //mapViewController.delegate = self;
-//        //mapViewController.title = @"Choose a city:";
-//    }
-//    return mapViewController;
-//}
-//- (UINavigationController *)dojoListNavigationController
-//{
-//    if (dojoListNavigationController == nil)
-//    {
-//        dojoListNavigationController = [[UINavigationController alloc] initWithRootViewController:self.dojoListNavigationController];
-//    }
-//    return dojoListNavigationController;
-//}
+
 
 @end

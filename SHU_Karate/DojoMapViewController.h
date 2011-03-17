@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "DojoSelectViewController.h"
-#import "DojoAnnotationController.h"
+
 
 
 @interface DojoMapViewController : UIViewController <MKMapViewDelegate, MKAnnotation>{
