@@ -46,9 +46,14 @@
                                              selector:@selector(playDidFinish:) 
                                                  name:MPMoviePlayerPlaybackDidFinishNotification 
                                                object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self 
+//                                             selector:@selector(showNavBar) 
+//                                                 name:MPMovieDurationAvailableNotification 
+//                                               object:nil];
     self.moviePlayerController = [[MPMoviePlayerViewController alloc] initWithContentURL:videoPath];
     [self.view addSubview:self.moviePlayerController.view];
     MPMoviePlayerController *controller = self.moviePlayerController.moviePlayer;
+    controller.repeatMode = YES;
     [controller prepareToPlay];
     [controller play];
     [self.moviePlayerController release];
@@ -57,8 +62,15 @@
 - (void) playDidFinish:(NSNotification*)notification
 {
 //	[moviePlayerController.view removeFromSuperview];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 
 }
+
+//- (void)showNavBar
+//{
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
+//}
 
 - (void)viewDidUnload
 {

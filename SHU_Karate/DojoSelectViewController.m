@@ -138,8 +138,8 @@
     DojoMapViewController *mapView = [[[DojoMapViewController alloc] init] autorelease];
     mapView.title = theDojo.name;
     mapView.theDojo = theDojo;
-
     mapViewController = mapView;
+//    self.navigationController.navigationBar = UIBarStyleBlackOpaque;
     [self.navigationController pushViewController:mapViewController animated:YES];
     
 }

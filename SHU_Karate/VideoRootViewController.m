@@ -99,6 +99,8 @@
     NSURL *url = [NSURL fileURLWithPath:path];
     videoView.videoPath = url;
     self.videoController = videoView;
+    videoView.hidesBottomBarWhenPushed = YES;
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     [videoView release];
     [self.navigationController pushViewController:videoController animated:YES];
 }

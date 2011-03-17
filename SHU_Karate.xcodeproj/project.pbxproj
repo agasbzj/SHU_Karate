@@ -64,6 +64,8 @@
 		A925AF3D132F902B0045171D /* DojoMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DojoMapViewController.xib; sourceTree = "<group>"; };
 		A925AF53132FA13F0045171D /* Dojos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dojos.h; sourceTree = "<group>"; };
 		A925AF54132FA13F0045171D /* Dojos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dojos.m; sourceTree = "<group>"; };
+		A948A0C5133213C300E91471 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "/Users/agasbzj/Documents/Projects/SHU_Karate/SHU_Karate/zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
+		A948A0C6133213C300E91471 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "/Users/agasbzj/Documents/Projects/SHU_Karate/SHU_KarateTests/zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
 		A960540813234826001FAD50 /* SHU_Karate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHU_Karate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A960540C13234826001FAD50 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A960540E13234826001FAD50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -252,12 +254,12 @@
 				A9E527C0132F4C420004B1F0 /* DojoSelectViewController.h */,
 				A9E527C1132F4C420004B1F0 /* DojoSelectViewController.m */,
 				A9E527C2132F4C420004B1F0 /* DojoSelectViewController.xib */,
-				A9E527C7132F56040004B1F0 /* Dojos.plist */,
 				A925AF3B132F902B0045171D /* DojoMapViewController.h */,
 				A925AF3C132F902B0045171D /* DojoMapViewController.m */,
 				A925AF3D132F902B0045171D /* DojoMapViewController.xib */,
 				A925AF53132FA13F0045171D /* Dojos.h */,
 				A925AF54132FA13F0045171D /* Dojos.m */,
+				A9E527C7132F56040004B1F0 /* Dojos.plist */,
 			);
 			name = Dojo;
 			sourceTree = "<group>";
@@ -276,10 +278,10 @@
 				A9EF0E841331B63800A75C87 /* VideoRootViewController.h */,
 				A9EF0E851331B63800A75C87 /* VideoRootViewController.m */,
 				A9EF0E861331B63800A75C87 /* VideoRootViewController.xib */,
-				A9EF0E891331B97C00A75C87 /* VideoList.plist */,
 				A9EF0E961331D75A00A75C87 /* VideoViewController.h */,
 				A9EF0E971331D75A00A75C87 /* VideoViewController.m */,
 				A9EF0E981331D75B00A75C87 /* VideoViewController.xib */,
+				A9EF0E891331B97C00A75C87 /* VideoList.plist */,
 			);
 			name = Videos;
 			sourceTree = "<group>";
@@ -452,6 +454,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A960541613234826001FAD50 /* en */,
+				A948A0C5133213C300E91471 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A960543C13234827001FAD50 /* en */,
+				A948A0C6133213C300E91471 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
