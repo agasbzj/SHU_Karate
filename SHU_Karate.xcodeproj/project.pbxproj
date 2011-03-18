@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A914926213330CAC00915408 /* 本部成立过程亲历记.xml in Resources */ = {isa = PBXBuildFile; fileRef = A914926113330CAC00915408 /* 本部成立过程亲历记.xml */; };
+		A914927313333E7900915408 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A914927213333E7900915408 /* CoreText.framework */; };
+		A914927E13334DC900915408 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A914927C13334DC000915408 /* TextViewController.m */; };
+		A914927F13334DC900915408 /* TextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A914927D13334DC300915408 /* TextViewController.xib */; };
+		A914928113334DD300915408 /* 本部成立亲历记.txt in Resources */ = {isa = PBXBuildFile; fileRef = A914928013334DD200915408 /* 本部成立亲历记.txt */; };
+		A91492831333510D00915408 /* TextAndPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A91492821333510900915408 /* TextAndPhotoView.xib */; };
+		A914928513335DA900915408 /* Community.png in Resources */ = {isa = PBXBuildFile; fileRef = A914928413335DA900915408 /* Community.png */; };
+		A914928713335E6D00915408 /* dojo.png in Resources */ = {isa = PBXBuildFile; fileRef = A914928613335E6D00915408 /* dojo.png */; };
+		A914928913335F0B00915408 /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = A914928813335F0B00915408 /* video.png */; };
+		A914928B13335FBD00915408 /* utility.png in Resources */ = {isa = PBXBuildFile; fileRef = A914928A13335FBD00915408 /* utility.png */; };
 		A925AF3E132F902B0045171D /* DojoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A925AF3C132F902B0045171D /* DojoMapViewController.m */; };
 		A925AF3F132F902B0045171D /* DojoMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A925AF3D132F902B0045171D /* DojoMapViewController.xib */; };
 		A925AF55132FA1410045171D /* Dojos.m in Sources */ = {isa = PBXBuildFile; fileRef = A925AF54132FA13F0045171D /* Dojos.m */; };
@@ -21,7 +31,6 @@
 		A960543D13234827001FAD50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A960543B13234827001FAD50 /* InfoPlist.strings */; };
 		A960544013234827001FAD50 /* SHU_KarateTests.h in Resources */ = {isa = PBXBuildFile; fileRef = A960543F13234827001FAD50 /* SHU_KarateTests.h */; };
 		A960544213234827001FAD50 /* SHU_KarateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A960544113234827001FAD50 /* SHU_KarateTests.m */; };
-		A960545713235811001FAD50 /* CommunityNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A960545613235811001FAD50 /* CommunityNavigationController.m */; };
 		A960546313236677001FAD50 /* CommunityRootTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A960546213236676001FAD50 /* CommunityRootTableCell.m */; };
 		A960546B13236C0A001FAD50 /* CommunityRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A960546913236C07001FAD50 /* CommunityRootViewController.m */; };
 		A960546C13236C0A001FAD50 /* CommunityRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A960546A13236C08001FAD50 /* CommunityRootViewController.xib */; };
@@ -59,6 +68,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A914926113330CAC00915408 /* 本部成立过程亲历记.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "本部成立过程亲历记.xml"; sourceTree = "<group>"; };
+		A914927213333E7900915408 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		A914927B13334DBE00915408 /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
+		A914927C13334DC000915408 /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
+		A914927D13334DC300915408 /* TextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextViewController.xib; sourceTree = "<group>"; };
+		A914928013334DD200915408 /* 本部成立亲历记.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "本部成立亲历记.txt"; sourceTree = "<group>"; };
+		A91492821333510900915408 /* TextAndPhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextAndPhotoView.xib; sourceTree = "<group>"; };
+		A914928413335DA900915408 /* Community.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Community.png; sourceTree = "<group>"; };
+		A914928613335E6D00915408 /* dojo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dojo.png; sourceTree = "<group>"; };
+		A914928813335F0B00915408 /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
+		A914928A13335FBD00915408 /* utility.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = utility.png; sourceTree = "<group>"; };
 		A925AF3B132F902B0045171D /* DojoMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DojoMapViewController.h; sourceTree = "<group>"; };
 		A925AF3C132F902B0045171D /* DojoMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DojoMapViewController.m; sourceTree = "<group>"; };
 		A925AF3D132F902B0045171D /* DojoMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DojoMapViewController.xib; sourceTree = "<group>"; };
@@ -82,8 +102,6 @@
 		A960543E13234827001FAD50 /* SHU_KarateTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SHU_KarateTests-Prefix.pch"; sourceTree = "<group>"; };
 		A960543F13234827001FAD50 /* SHU_KarateTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHU_KarateTests.h; sourceTree = "<group>"; };
 		A960544113234827001FAD50 /* SHU_KarateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHU_KarateTests.m; sourceTree = "<group>"; };
-		A960545513235811001FAD50 /* CommunityNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityNavigationController.h; sourceTree = "<group>"; };
-		A960545613235811001FAD50 /* CommunityNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityNavigationController.m; sourceTree = "<group>"; };
 		A960546113236676001FAD50 /* CommunityRootTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityRootTableCell.h; sourceTree = "<group>"; };
 		A960546213236676001FAD50 /* CommunityRootTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityRootTableCell.m; sourceTree = "<group>"; };
 		A960546813236C07001FAD50 /* CommunityRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityRootViewController.h; sourceTree = "<group>"; };
@@ -121,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A914927313333E7900915408 /* CoreText.framework in Frameworks */,
 				A9EF0E9C1331D7DF00A75C87 /* MediaPlayer.framework in Frameworks */,
 				A9978A8F1330DA94005A54AF /* CoreData.framework in Frameworks */,
 				A9978A8C1330DA6F005A54AF /* CoreLocation.framework in Frameworks */,
@@ -143,6 +162,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A914926013330C5800915408 /* 文章 */ = {
+			isa = PBXGroup;
+			children = (
+				A914928013334DD200915408 /* 本部成立亲历记.txt */,
+				A914926113330CAC00915408 /* 本部成立过程亲历记.xml */,
+			);
+			name = "文章";
+			sourceTree = "<group>";
+		};
 		A96053FD13234826001FAD50 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +194,7 @@
 		A960540B13234826001FAD50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A914927213333E7900915408 /* CoreText.framework */,
 				A9EF0E9B1331D7DE00A75C87 /* MediaPlayer.framework */,
 				A9978A8E1330DA94005A54AF /* CoreData.framework */,
 				A9978A8B1330DA6F005A54AF /* CoreLocation.framework */,
@@ -182,10 +211,10 @@
 			isa = PBXGroup;
 			children = (
 				A960546D13236EF2001FAD50 /* Resources */,
-				A960546013235EB3001FAD50 /* Community */,
-				A9E527AE132F18C80004B1F0 /* Dojo */,
-				A9EF0E831331B5E400A75C87 /* Videos */,
-				A9EF0E631331A5D600A75C87 /* Utility */,
+				A960546013235EB3001FAD50 /* 社团 */,
+				A9E527AE132F18C80004B1F0 /* 道场 */,
+				A9EF0E831331B5E400A75C87 /* 映画 */,
+				A9EF0E631331A5D600A75C87 /* 指南 */,
 				A960541B13234826001FAD50 /* SHU_KarateAppDelegate.h */,
 				A960541C13234826001FAD50 /* SHU_KarateAppDelegate.m */,
 				A960541313234826001FAD50 /* Supporting Files */,
@@ -224,31 +253,38 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A960546013235EB3001FAD50 /* Community */ = {
+		A960546013235EB3001FAD50 /* 社团 */ = {
 			isa = PBXGroup;
 			children = (
-				A96054771323829B001FAD50 /* Data.plist */,
-				A960545513235811001FAD50 /* CommunityNavigationController.h */,
-				A960545613235811001FAD50 /* CommunityNavigationController.m */,
-				A960546113236676001FAD50 /* CommunityRootTableCell.h */,
-				A960546213236676001FAD50 /* CommunityRootTableCell.m */,
+				A914926013330C5800915408 /* 文章 */,
 				A960546813236C07001FAD50 /* CommunityRootViewController.h */,
 				A960546913236C07001FAD50 /* CommunityRootViewController.m */,
-				A960547913238933001FAD50 /* CommunityRootTabelCell.xib */,
 				A960546A13236C08001FAD50 /* CommunityRootViewController.xib */,
+				A960546113236676001FAD50 /* CommunityRootTableCell.h */,
+				A960546213236676001FAD50 /* CommunityRootTableCell.m */,
+				A960547913238933001FAD50 /* CommunityRootTabelCell.xib */,
+				A96054771323829B001FAD50 /* Data.plist */,
+				A914927B13334DBE00915408 /* TextViewController.h */,
+				A914927C13334DC000915408 /* TextViewController.m */,
+				A914927D13334DC300915408 /* TextViewController.xib */,
+				A91492821333510900915408 /* TextAndPhotoView.xib */,
 			);
-			name = Community;
+			name = "社团";
 			sourceTree = "<group>";
 		};
 		A960546D13236EF2001FAD50 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				A960546E13236F27001FAD50 /* icon.png */,
+				A914928413335DA900915408 /* Community.png */,
+				A914928813335F0B00915408 /* video.png */,
+				A914928613335E6D00915408 /* dojo.png */,
+				A914928A13335FBD00915408 /* utility.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		A9E527AE132F18C80004B1F0 /* Dojo */ = {
+		A9E527AE132F18C80004B1F0 /* 道场 */ = {
 			isa = PBXGroup;
 			children = (
 				A9E527C0132F4C420004B1F0 /* DojoSelectViewController.h */,
@@ -261,20 +297,20 @@
 				A925AF54132FA13F0045171D /* Dojos.m */,
 				A9E527C7132F56040004B1F0 /* Dojos.plist */,
 			);
-			name = Dojo;
+			name = "道场";
 			sourceTree = "<group>";
 		};
-		A9EF0E631331A5D600A75C87 /* Utility */ = {
+		A9EF0E631331A5D600A75C87 /* 指南 */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Utility;
+			name = "指南";
 			sourceTree = "<group>";
 		};
-		A9EF0E831331B5E400A75C87 /* Videos */ = {
+		A9EF0E831331B5E400A75C87 /* 映画 */ = {
 			isa = PBXGroup;
 			children = (
-				A9EF0E8B1331B9AB00A75C87 /* Videos */,
+				A9EF0E8B1331B9AB00A75C87 /* 视频文件 */,
 				A9EF0E841331B63800A75C87 /* VideoRootViewController.h */,
 				A9EF0E851331B63800A75C87 /* VideoRootViewController.m */,
 				A9EF0E861331B63800A75C87 /* VideoRootViewController.xib */,
@@ -283,10 +319,10 @@
 				A9EF0E981331D75B00A75C87 /* VideoViewController.xib */,
 				A9EF0E891331B97C00A75C87 /* VideoList.plist */,
 			);
-			name = Videos;
+			name = "映画";
 			sourceTree = "<group>";
 		};
-		A9EF0E8B1331B9AB00A75C87 /* Videos */ = {
+		A9EF0E8B1331B9AB00A75C87 /* 视频文件 */ = {
 			isa = PBXGroup;
 			children = (
 				A9EF0E8C1331B9C300A75C87 /* 平安初段.mp4 */,
@@ -295,7 +331,7 @@
 				A9EF0E8F1331B9C300A75C87 /* 平安四段.mp4 */,
 				A9EF0E901331B9C300A75C87 /* 平安五段.mp4 */,
 			);
-			name = Videos;
+			name = "视频文件";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +419,14 @@
 				A9EF0E941331B9C300A75C87 /* 平安四段.mp4 in Resources */,
 				A9EF0E951331B9C300A75C87 /* 平安五段.mp4 in Resources */,
 				A9EF0E9A1331D75B00A75C87 /* VideoViewController.xib in Resources */,
+				A914926213330CAC00915408 /* 本部成立过程亲历记.xml in Resources */,
+				A914927F13334DC900915408 /* TextViewController.xib in Resources */,
+				A914928113334DD300915408 /* 本部成立亲历记.txt in Resources */,
+				A91492831333510D00915408 /* TextAndPhotoView.xib in Resources */,
+				A914928513335DA900915408 /* Community.png in Resources */,
+				A914928713335E6D00915408 /* dojo.png in Resources */,
+				A914928913335F0B00915408 /* video.png in Resources */,
+				A914928B13335FBD00915408 /* utility.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +464,6 @@
 			files = (
 				A960541A13234826001FAD50 /* main.m in Sources */,
 				A960541D13234826001FAD50 /* SHU_KarateAppDelegate.m in Sources */,
-				A960545713235811001FAD50 /* CommunityNavigationController.m in Sources */,
 				A960546313236677001FAD50 /* CommunityRootTableCell.m in Sources */,
 				A960546B13236C0A001FAD50 /* CommunityRootViewController.m in Sources */,
 				A9E527C3132F4C420004B1F0 /* DojoSelectViewController.m in Sources */,
@@ -428,6 +471,7 @@
 				A925AF55132FA1410045171D /* Dojos.m in Sources */,
 				A9EF0E871331B63800A75C87 /* VideoRootViewController.m in Sources */,
 				A9EF0E991331D75B00A75C87 /* VideoViewController.m in Sources */,
+				A914927E13334DC900915408 /* TextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

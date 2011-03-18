@@ -13,6 +13,10 @@
 
 @implementation CommunityRootViewController
 @synthesize _rootDataArray, _tempCell, tableView;
+
+@synthesize selectedTitle;
+@synthesize texts;
+@synthesize textViewController;
 //- (id)initWithStyle:(UITableViewStyle)style
 //{
 //    self = [super initWithStyle:style];
@@ -24,6 +28,10 @@
 
 - (void)dealloc
 {
+    [textViewController release];
+    [texts release];
+    [selectedTitle release];
+
     [tableView release];
     [_rootDataArray release];
     [super dealloc];
@@ -57,6 +65,7 @@
     NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
     self._rootDataArray = [NSArray arrayWithContentsOfFile:dataPath];
     self.tableView.backgroundColor = kDARK_BACKGROUND;
+
 }
 
 - (void)viewDidUnload
@@ -180,15 +189,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSString *file = [[NSBundle mainBundle] pathForResource:@"本部成立亲历记" ofType:@"txt"];
+    textViewController = [[[TextViewController alloc] init] autorelease];
+    textViewController.file = file;
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self.navigationController pushViewController:textViewController animated:YES];
+
 }
 
 @end
