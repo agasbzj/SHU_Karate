@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SHU_Karate/DojoMapViewController.m"
-         timestampString = "321975199.012785"
+         timestampString = "322222084.115"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "141"
-         endingLineNumber = "141"
+         startingLineNumber = "155"
+         endingLineNumber = "155"
          landmarkName = "-DojoSelectViewController:didChooseDojo:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -23,13 +23,41 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "SHU_Karate/DojoMapViewController.m"
-         timestampString = "321975199.012785"
+         timestampString = "322222084.115"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "138"
-         endingLineNumber = "138"
+         startingLineNumber = "152"
+         endingLineNumber = "152"
          landmarkName = "-DojoSelectViewController:didChooseDojo:"
          landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "SHU_Karate/DojoMapViewController.m"
+         timestampString = "322222084.115"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "78"
+         endingLineNumber = "78"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "SHU_Karate/CommunityRootViewController.h"
+         timestampString = "322320827.805462"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "22"
+         endingLineNumber = "22"
+         landmarkName = "_rootDataArray"
+         landmarkType = "19">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

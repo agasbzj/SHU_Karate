@@ -41,6 +41,8 @@
 		A9978A7813306475005A54AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9978A7713306475005A54AF /* MapKit.framework */; };
 		A9978A8C1330DA6F005A54AF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9978A8B1330DA6F005A54AF /* CoreLocation.framework */; };
 		A9978A8F1330DA94005A54AF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9978A8E1330DA94005A54AF /* CoreData.framework */; };
+		A9C329B11334677900D0F9C8 /* UtilityRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C329AF1334677900D0F9C8 /* UtilityRootViewController.m */; };
+		A9C329B21334677900D0F9C8 /* UtilityRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9C329B01334677900D0F9C8 /* UtilityRootViewController.xib */; };
 		A9E527C3132F4C420004B1F0 /* DojoSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E527C1132F4C420004B1F0 /* DojoSelectViewController.m */; };
 		A9E527C4132F4C420004B1F0 /* DojoSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E527C2132F4C420004B1F0 /* DojoSelectViewController.xib */; };
 		A9E527C8132F56040004B1F0 /* Dojos.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9E527C7132F56040004B1F0 /* Dojos.plist */; };
@@ -115,6 +117,9 @@
 		A9978A7913306B47005A54AF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A9978A8B1330DA6F005A54AF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A9978A8E1330DA94005A54AF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A9C329AE1334677900D0F9C8 /* UtilityRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityRootViewController.h; sourceTree = "<group>"; };
+		A9C329AF1334677900D0F9C8 /* UtilityRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilityRootViewController.m; sourceTree = "<group>"; };
+		A9C329B01334677900D0F9C8 /* UtilityRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UtilityRootViewController.xib; sourceTree = "<group>"; };
 		A9E527C0132F4C420004B1F0 /* DojoSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DojoSelectViewController.h; sourceTree = "<group>"; };
 		A9E527C1132F4C420004B1F0 /* DojoSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DojoSelectViewController.m; sourceTree = "<group>"; };
 		A9E527C2132F4C420004B1F0 /* DojoSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DojoSelectViewController.xib; sourceTree = "<group>"; };
@@ -303,6 +308,9 @@
 		A9EF0E631331A5D600A75C87 /* 指南 */ = {
 			isa = PBXGroup;
 			children = (
+				A9C329AE1334677900D0F9C8 /* UtilityRootViewController.h */,
+				A9C329AF1334677900D0F9C8 /* UtilityRootViewController.m */,
+				A9C329B01334677900D0F9C8 /* UtilityRootViewController.xib */,
 			);
 			name = "指南";
 			sourceTree = "<group>";
@@ -427,6 +435,7 @@
 				A914928713335E6D00915408 /* dojo.png in Resources */,
 				A914928913335F0B00915408 /* video.png in Resources */,
 				A914928B13335FBD00915408 /* utility.png in Resources */,
+				A9C329B21334677900D0F9C8 /* UtilityRootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +481,7 @@
 				A9EF0E871331B63800A75C87 /* VideoRootViewController.m in Sources */,
 				A9EF0E991331D75B00A75C87 /* VideoViewController.m in Sources */,
 				A914927E13334DC900915408 /* TextViewController.m in Sources */,
+				A9C329B11334677900D0F9C8 /* UtilityRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

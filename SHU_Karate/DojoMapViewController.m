@@ -61,11 +61,25 @@
 }
 
 #pragma mark - View lifecycle
+/*
+- (void)navagateBack:(id)sender{
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    self.navigationController.navigationBar.translucent = NO;
+    [self.navigationController popViewControllerAnimated:YES];
+}
+*/
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    
+//    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemUndo target:self action:@selector(navagateBack:)];
+//    
+//    self.navigationItem.leftBarButtonItem = backButton;
+// 
+//    设置导航栏透明
+//    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+//    self.navigationController.navigationBar.translucent = YES;
     
-//    [mapView setDelegate:self];
     UISegmentedControl *mapStyle = [[UISegmentedControl alloc] initWithItems:
                                             [NSArray arrayWithObjects:
                                              @"地图",
