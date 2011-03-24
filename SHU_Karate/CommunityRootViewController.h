@@ -14,6 +14,7 @@
     CommunityRootTableCell *_tempCell;
     NSArray *_rootDataArray;
     NSString *selectedTitle;
+    
     UITableView *tableView;
 
     NSArray *texts;

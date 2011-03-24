@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1024</int>
-		<string key="IBDocument.SystemVersion">10J567</string>
+		<string key="IBDocument.SystemVersion">10J869</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1305</string>
 		<string key="IBDocument.AppKitVersion">1038.35</string>
-		<string key="IBDocument.HIToolboxVersion">462.00</string>
+		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">300</string>
@@ -53,7 +53,6 @@
 				<object class="NSPSMatrix" key="NSFrameMatrix"/>
 				<string key="NSFrameSize">{320, 480}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -73,12 +72,12 @@
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<bool key="IBUIHorizontal">NO</bool>
-				<object class="IBUINavigationController" key="IBUISelectedViewController" id="444978914">
-					<object class="IBUITabBarItem" key="IBUITabBarItem" id="956425745">
-						<string key="IBUITitle">社团</string>
+				<object class="IBUINavigationController" key="IBUISelectedViewController" id="851548909">
+					<object class="IBUITabBarItem" key="IBUITabBarItem" id="984432798">
+						<string key="IBUITitle">道场</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">Community.png</string>
+							<string key="NSResourceName">dojo.png</string>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
@@ -90,7 +89,7 @@
 					</object>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					<bool key="IBUIHorizontal">NO</bool>
-					<object class="IBUINavigationBar" key="IBUINavigationBar" id="506945014">
+					<object class="IBUINavigationBar" key="IBUINavigationBar" id="751994683">
 						<nil key="NSNextResponder"/>
 						<int key="NSvFlags">256</int>
 						<string key="NSFrameSize">{0, 0}</string>
@@ -101,13 +100,13 @@
 					</object>
 					<object class="NSMutableArray" key="IBUIViewControllers">
 						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="IBUIViewController" id="855275400">
-							<object class="IBUINavigationItem" key="IBUINavigationItem" id="770989987">
-								<string key="IBUITitle">Root View Controller</string>
+						<object class="IBUIViewController" id="241914176">
+							<object class="IBUINavigationItem" key="IBUINavigationItem" id="783052635">
+								<string key="IBUITitle">道场一览</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
-							<reference key="IBUIParentViewController" ref="444978914"/>
-							<string key="IBUINibName">CommunityRootViewController</string>
+							<reference key="IBUIParentViewController" ref="851548909"/>
+							<string key="IBUINibName">DojoSelectViewController</string>
 							<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 								<int key="IBUIInterfaceOrientation">1</int>
 								<int key="interfaceOrientation">1</int>
@@ -119,13 +118,12 @@
 				</object>
 				<object class="NSMutableArray" key="IBUIViewControllers">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<reference ref="444978914"/>
-					<object class="IBUINavigationController" id="851548909">
-						<object class="IBUITabBarItem" key="IBUITabBarItem" id="984432798">
-							<string key="IBUITitle">道场</string>
+					<object class="IBUINavigationController" id="444978914">
+						<object class="IBUITabBarItem" key="IBUITabBarItem" id="956425745">
+							<string key="IBUITitle">社团</string>
 							<object class="NSCustomResource" key="IBUIImage">
 								<string key="NSClassName">NSImage</string>
-								<string key="NSResourceName">dojo.png</string>
+								<string key="NSResourceName">Community.png</string>
 							</object>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
@@ -137,7 +135,7 @@
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIHorizontal">NO</bool>
-						<object class="IBUINavigationBar" key="IBUINavigationBar" id="751994683">
+						<object class="IBUINavigationBar" key="IBUINavigationBar" id="506945014">
 							<nil key="NSNextResponder"/>
 							<int key="NSvFlags">256</int>
 							<string key="NSFrameSize">{0, 0}</string>
@@ -148,13 +146,13 @@
 						</object>
 						<object class="NSMutableArray" key="IBUIViewControllers">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIViewController" id="241914176">
-								<object class="IBUINavigationItem" key="IBUINavigationItem" id="783052635">
-									<string key="IBUITitle">道场一览</string>
+							<object class="IBUIViewController" id="855275400">
+								<object class="IBUINavigationItem" key="IBUINavigationItem" id="770989987">
+									<string key="IBUITitle">Root View Controller</string>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
-								<reference key="IBUIParentViewController" ref="851548909"/>
-								<string key="IBUINibName">DojoSelectViewController</string>
+								<reference key="IBUIParentViewController" ref="444978914"/>
+								<string key="IBUINibName">CommunityRootViewController</string>
 								<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 									<int key="IBUIInterfaceOrientation">1</int>
 									<int key="interfaceOrientation">1</int>
@@ -164,6 +162,7 @@
 							</object>
 						</object>
 					</object>
+					<reference ref="851548909"/>
 					<object class="IBUINavigationController" id="572594045">
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="448424317">
 							<string key="IBUITitle">映画</string>
@@ -244,6 +243,7 @@
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
 								<reference key="IBUIParentViewController" ref="445659629"/>
+								<string key="IBUINibName">UtilityRootViewController</string>
 								<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 									<int key="IBUIInterfaceOrientation">1</int>
 									<int key="interfaceOrientation">1</int>
@@ -259,7 +259,6 @@
 					<int key="NSvFlags">266</int>
 					<string key="NSFrame">{{0, 431}, {320, 49}}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSNextKeyView"/>
 					<object class="NSColor" key="IBUIBackgroundColor">
 						<int key="NSColorSpace">3</int>
 						<bytes key="NSWhite">MCAwAA</bytes>
@@ -503,6 +502,7 @@
 					<string>107.IBPluginDependency</string>
 					<string>144.IBPluginDependency</string>
 					<string>145.IBPluginDependency</string>
+					<string>146.CustomClassName</string>
 					<string>146.IBPluginDependency</string>
 					<string>148.IBPluginDependency</string>
 					<string>149.IBPluginDependency</string>
@@ -534,6 +534,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>UtilityRootViewController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

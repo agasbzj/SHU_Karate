@@ -50,14 +50,14 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "SHU_Karate/CommunityRootViewController.h"
-         timestampString = "322320827.805462"
+         filePath = "SHU_Karate/UtilityRootViewController.m"
+         timestampString = "322650922.619426"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "22"
-         endingLineNumber = "22"
-         landmarkName = "_rootDataArray"
-         landmarkType = "19">
+         startingLineNumber = "220"
+         endingLineNumber = "220"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
