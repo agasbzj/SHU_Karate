@@ -15,23 +15,19 @@ extern NSString *kItemsMsgErrorKey;
 
 
 
-@protocol ParseOperationDelegate <NSObject>
 
-- (void)getAParsedItem:(OneItem *)item;
-
-@end
 
 @interface ParseOperation : NSOperation <NSXMLParserDelegate>{
-    id <ParseOperationDelegate> delegate;
+
     NSData *itemData;
     
     NSDateFormatter *dateFormatter;
     OneItem *currentItemObject;
     
-    NSMutableArray *currentParseBatch;
-    NSMutableString *currentParsedCharacterData;
+    NSMutableArray *currentParseBatch;  //当前缓存
+    NSMutableString *currentParsedCharacterData;    //当前解析的字符串
     
-    BOOL accumulatingParsedCharacterData;
+    BOOL accumulatingParsedCharacterData;   //是否堆积当前解析的字符
     BOOL didAbortParsing;
     
     NSUInteger parsedItemsCounter;
@@ -43,7 +39,7 @@ extern NSString *kItemsMsgErrorKey;
 @property (nonatomic, retain) NSMutableArray *currentParseBatch;
 @property (nonatomic, retain) NSMutableString *currentParsedCharacterData;
 @property (nonatomic, retain) NSString *m_currentParse;
-@property (nonatomic, retain) id <ParseOperationDelegate> delegate;
+
 
 
 @end

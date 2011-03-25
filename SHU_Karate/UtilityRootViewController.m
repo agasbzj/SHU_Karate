@@ -62,18 +62,21 @@
     
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
-    parseQueue = [NSOperation new];
+    parseQueue = [NSOperationQueue new];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addItems:) name:kAddItemsNotif object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(itemsError:) name:kItemsErrorNotif object:nil];
                                 
     self.itemList = [NSMutableArray array];
-    [self addObserver:self forKeyPath:@"earthquakeList" options:0 context:NULL];
+    [self addObserver:self forKeyPath:@"itemList" options:0 context:NULL];
+    self.tableView.rowHeight = 60;
 
 }
 
 - (void)viewDidUnload
 {
+    self.itemList = nil;
+    [self removeObserver:self forKeyPath:@"itemList"];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -143,14 +146,14 @@
     //
     // IMPORTANT! - Don't access or affect UIKit objects on secondary threads.
     //
-//    ParseOperation *parseOperation = [[ParseOperation alloc] initWithData:self.itemData];
-//    [self.parseQueue addOperation:parseOperation];
-//    [parseOperation release];   // once added to the NSOperationQueue it's retained, we don't need it anymore
+    ParseOperation *parseOperation = [[ParseOperation alloc] initWithData:self.itemData];
+    [self.parseQueue addOperation:parseOperation];
+    [parseOperation release];   // once added to the NSOperationQueue it's retained, we don't need it anymore
     
     // earthquakeData will be retained by the NSOperation until it has finished executing,
     // so we no longer need a reference to it in the main thread.
     
-    [[[ParseOperation alloc] initWithData:self.itemData] start];
+
 
     self.itemData = nil;
 }
@@ -190,15 +193,7 @@
     [self handleError:[[notif userInfo] valueForKey:kItemsMsgErrorKey]];
 }
 
-// The NSOperation "ParseOperation" calls addEarthquakes: via NSNotification, on the main thread
-// which in turn calls this method, with batches of parsed objects.
-// The batch size is set via the kSizeOfEarthquakeBatch constant.
-//
-- (void)addItemToList:(NSArray *)items {
-    
-    // insert the earthquakes into our rootViewController's data source (for KVO purposes)
-    [self insertItems:items];
-}
+
 
 #pragma mark -
 #pragma mark UITableViewDelegate
@@ -227,7 +222,8 @@
     
     // Get the specific earthquake for this row.
 	OneItem *item = [itemList objectAtIndex:indexPath.row];
-    cell.textLabel.text = item.artist;
+    cell.textLabel.text = item.title;
+//    cell.detailTextLabel.text = item.artist;
 	return cell;
 }
 
@@ -242,17 +238,20 @@
 #pragma mark -
 #pragma mark KVO support
 
-- (void)insertEarthquakes:(NSArray *)earthquakes
+- (void)insertItems:(NSArray *)items
 {
     // this will allow us as an observer to notified (see observeValueForKeyPath)
     // so we can update our UITableView
     //
-    [self willChangeValueForKey:@"earthquakeList"];
-    [self.itemList addObjectsFromArray:earthquakes];
-    [self didChangeValueForKey:@"earthquakeList"];
+    [self willChangeValueForKey:@"itemList"];
+    [self.itemList addObjectsFromArray:items];
+    [self didChangeValueForKey:@"itemList"];
 }
-
-// listen for changes to the earthquake list coming from our app delegate.
+- (void)addItemToList:(NSArray *)items {
+    
+    // insert the earthquakes into our rootViewController's data source (for KVO purposes)
+    [self insertItems:items];
+}
 - (void)observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object
                         change:(NSDictionary *)change
@@ -260,10 +259,10 @@
 {
     [self.tableView reloadData];
 }
+// listen for changes to the earthquake list coming from our app delegate.
 
 
-- (void)getAParsedItem:(OneItem *)item{
-    [itemList addObject:item];
-}
+
+
 
 @end

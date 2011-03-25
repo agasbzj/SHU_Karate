@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "ParseOperation.h"
 
-@interface UtilityRootViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSXMLParserDelegate, UIActionSheetDelegate, ParseOperationDelegate>{
+@interface UtilityRootViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSXMLParserDelegate, UIActionSheetDelegate>{
     UITableView *tableView;
     
     NSURLConnection *itemFeedConnection;
+    
     NSOperationQueue *parseQueue;
+    
     NSMutableData *itemData;
     
     NSMutableArray *itemList;

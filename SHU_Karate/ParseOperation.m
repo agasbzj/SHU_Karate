@@ -80,29 +80,23 @@ NSString *kItemsMsgErrorKey = @"ItemsMsgErrorKey";
 #pragma mark -
 #pragma mark Parser constants
 
-// Limit the number of parsed earthquakes to 50
-// (a given day may have more than 50 earthquakes around the world, so we only take the first 50)
-//
-static const const NSUInteger kMaximumNumberOfItemsToParse = 50;
+//解析总数的限制。
+static const const NSUInteger kMaximumNumberOfItemsToParse = 200;
 
-// When an Earthquake object has been fully constructed, it must be passed to the main thread and
-// the table view in RootViewController must be reloaded to display it. It is not efficient to do
-// this for every Earthquake object - the overhead in communicating between the threads and reloading
-// the table exceed the benefit to the user. Instead, we pass the objects in batches, sized by the
-// constant below. In your application, the optimal batch size will vary 
-// depending on the amount of data in the object and other factors, as appropriate.
-//
+
+
 static NSUInteger const kSizeOfItemBatch = 10;
 
 // Reduce potential parsing errors by using string constants declared in a single place.
 static NSString * const kEntryElementName = @"entry";
-//static NSString * const kLinkElementName = @"link";
+
 static NSString * const kNameElementName = @"name";
 static NSString * const kTitleElementName = @"title";
 static NSString * const kCategoryElementName = @"category";
 static NSString * const kArtistElementName = @"artist";
 static NSString * const kPriceElementName = @"price";
-static NSString * const kImageElementName = @"image height=\"60\"";
+static NSString * const kImageElementName = @"image";
+//static NSString * const kImageElementName = @"image height=\"60\"";
 
 #pragma mark -
 #pragma mark NSXMLParser delegate methods
@@ -111,8 +105,7 @@ static NSString * const kImageElementName = @"image height=\"60\"";
   namespaceURI:(NSString *)namespaceURI
  qualifiedName:(NSString *)qName
     attributes:(NSDictionary *)attributeDict {
-    m_currentParse = elementName;
-    
+
     
     // If the number of parsed earthquakes is greater than
     // kMaximumNumberOfEarthquakesToParse, abort the parse.
@@ -124,34 +117,39 @@ static NSString * const kImageElementName = @"image height=\"60\"";
         didAbortParsing = YES;
         [parser abortParsing];
     }
-//    if ([elementName isEqualToString:kEntryElementName]) {
-//          OneItem *oneItem = [[OneItem alloc] init];
-//        self.currentItemObject = oneItem;
-//        [oneItem release];
-//    } 
-//    else if ([elementName isEqualToString:kLinkElementName]) {
-//        NSString *relAttribute = [attributeDict valueForKey:@"rel"];
-//        if ([relAttribute isEqualToString:@"alternate"]) {
-//            NSString *USGSWebLink = [attributeDict valueForKey:@"href"];
-//            self.currentItemObject.USGSWebLink = [NSURL URLWithString:USGSWebLink];
-//        }
-//    } 
-//    else if ([elementName isEqualToString:kTitleElementName] ||
-//               [elementName isEqualToString:kUpdatedElementName] ||
-//               [elementName isEqualToString:kGeoRSSPointElementName]) {
-//        // For the 'title', 'updated', or 'georss:point' element begin accumulating parsed character data.
-//        // The contents are collected in parser:foundCharacters:.
-//        accumulatingParsedCharacterData = YES;
-//        // The mutable string needs to be reset to empty.
-//        [currentParsedCharacterData setString:@""];
-//    }
+    if ([elementName isEqualToString:kEntryElementName]) {
+          OneItem *oneItem = [[OneItem alloc] init];
+        self.currentItemObject = oneItem;
+        [oneItem release];
+    } 
+    else if ([elementName isEqualToString:kCategoryElementName]) {
+        NSString *categoryValue = [attributeDict valueForKey:@"label"];
+        self.currentItemObject.category = categoryValue;
+    } 
+    else if ([elementName isEqualToString:kTitleElementName] ||
+             [elementName isEqualToString:kNameElementName] ||
+               [elementName isEqualToString:kArtistElementName] ||
+             [elementName isEqualToString:kPriceElementName]) {
+
+        // The contents are collected in parser:foundCharacters:.
+        accumulatingParsedCharacterData = YES;
+        // The mutable string needs to be reset to empty.
+        [currentParsedCharacterData setString:@""];
+
+    }
+    else if ([elementName isEqualToString:kImageElementName]) {
+        if ([[attributeDict valueForKey:@"height"] isEqualToString:@"60"]) {
+            accumulatingParsedCharacterData = YES;
+            [currentParsedCharacterData setString:@""];
+        }
+    }
 
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
-    if ([m_currentParse isEqualToString:@"artist"]) {
-        currentItemObject.artist = string;
+    if (accumulatingParsedCharacterData) {
+        [self.currentParsedCharacterData appendString:string]; 
     }
 }
 
@@ -162,77 +160,32 @@ static NSString * const kImageElementName = @"image height=\"60\"";
     if ([elementName isEqualToString:kEntryElementName]) {
         [self.currentParseBatch addObject:self.currentItemObject];
         parsedItemsCounter++;
-        if ([self.currentParseBatch count] >= kMaximumNumberOfItemsToParse) {
-            [self performSelectorOnMainThread:@selector(addItemsToList::)
+        if ([self.currentParseBatch count] >= kSizeOfItemBatch) {
+            [self performSelectorOnMainThread:@selector(addItemsToList:)
                                    withObject:self.currentParseBatch
                                 waitUntilDone:NO];
             self.currentParseBatch = [NSMutableArray array];
         }
     } 
-    else if ([elementName isEqualToString:@"artist"]){
-        [delegate getAParsedItem:currentItemObject];
-        
+    else if ([elementName isEqualToString:kNameElementName]) {
+        self.currentItemObject.name = currentParsedCharacterData;
     }
-//    else if ([elementName isEqualToString:kTitleElementName]) {
-//        // The title element contains the magnitude and location in the following format:
-//        // <title>M 3.6, Virgin Islands region<title/>
-//        // Extract the magnitude and the location using a scanner:
-//        NSScanner *scanner = [NSScanner scannerWithString:self.currentParsedCharacterData];
-//        // Scan past the "M " before the magnitude.
-//        if ([scanner scanString:@"M " intoString:NULL]) {
-//            CGFloat magnitude;
-//            if ([scanner scanFloat:&magnitude]) {
-//                self.currentItemObject.magnitude = magnitude;
-//                // Scan past the ", " before the title.
-//                if ([scanner scanString:@", " intoString:NULL]) {
-//                    NSString *location = nil;
-//                    // Scan the remainer of the string.
-//                    if ([scanner scanUpToCharactersFromSet:
-//                         [NSCharacterSet illegalCharacterSet] intoString:&location]) {
-//                        self.currentEarthquakeObject.location = location;
-//                    }
-//                }
-//            }
-//        }
-//    } 
-//    else if ([elementName isEqualToString:kUpdatedElementName]) {
-//        if (self.currentItemObject != nil) {
-//            self.currentItemObject.date =
-//            [dateFormatter dateFromString:self.currentParsedCharacterData];
-//        }
-//        else {
-//            // kUpdatedElementName can be found outside an entry element (i.e. in the XML header)
-//            // so don't process it here.
-//        }
-//    } else if ([elementName isEqualToString:kGeoRSSPointElementName]) {
-//        // The georss:point element contains the latitude and longitude of the earthquake epicenter.
-//        // 18.6477 -66.7452
-//        //
-//        NSScanner *scanner = [NSScanner scannerWithString:self.currentParsedCharacterData];
-//        double latitude, longitude;
-//        if ([scanner scanDouble:&latitude]) {
-//            if ([scanner scanDouble:&longitude]) {
-//                self.currentEarthquakeObject.latitude = latitude;
-//                self.currentEarthquakeObject.longitude = longitude;
-//            }
-//        }
-//    }
+    else if ([elementName isEqualToString:kArtistElementName]) {
+        self.currentItemObject.artist = currentParsedCharacterData;
+    }
+    else if ([elementName isEqualToString:kPriceElementName]) {
+        self.currentItemObject.price = currentParsedCharacterData;
+    }
+    else if ([elementName isEqualToString:kTitleElementName]) {
+        self.currentItemObject.title = currentParsedCharacterData;
+    }
+    else if ([elementName isEqualToString:kImageElementName]) {
+        self.currentItemObject.image = currentParsedCharacterData;
+    }
     // Stop accumulating parsed character data. We won't start again until specific elements begin.
     accumulatingParsedCharacterData = NO;
 }
-//
-//// This method is called by the parser when it find parsed character data ("PCDATA") in an element.
-//// The parser is not guaranteed to deliver all of the parsed character data for an element in a single
-//// invocation, so it is necessary to accumulate character data until the end of the element is reached.
-////
-//- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-//    if (accumulatingParsedCharacterData) {
-//        // If the current element is one whose content we care about, append 'string'
-//        // to the property that holds the content of the current element.
-//        //
-//        [self.currentParsedCharacterData appendString:string];
-//    }
-//}
+
 
 // an error occurred while parsing the earthquake data,
 // post the error as an NSNotification to our app delegate.
