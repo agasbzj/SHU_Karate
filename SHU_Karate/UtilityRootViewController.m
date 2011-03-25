@@ -214,7 +214,7 @@
   	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 	if (cell == nil) {
         // No reusable cell was available, so we create a new cell and configure its subviews.
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                        reuseIdentifier:cellIdentifier] autorelease];
 
         
@@ -222,8 +222,15 @@
     
     // Get the specific earthquake for this row.
 	OneItem *item = [itemList objectAtIndex:indexPath.row];
-    cell.textLabel.text = item.title;
-//    cell.detailTextLabel.text = item.artist;
+    cell.textLabel.text = item.name;
+    cell.detailTextLabel.text = item.artist;
+    
+    NSURL *url = [NSURL URLWithString:item.image];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    UIImage *image = [[UIImage alloc] initWithData:data];
+    cell.imageView.image = image;
+    [image release];
+    
 	return cell;
 }
 

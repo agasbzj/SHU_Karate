@@ -14,7 +14,7 @@ NSString *kItemResultsKey = @"ItemResultsKey";
 NSString *kItemsMsgErrorKey = @"ItemsMsgErrorKey";
 @implementation ParseOperation
 @synthesize itemData, currentItemObject, currentParseBatch, currentParsedCharacterData;
-@synthesize m_currentParse;
+
 - (id)initWithData:(NSData *)parseData
 {
     if (self = [super init]) {    
@@ -73,7 +73,6 @@ NSString *kItemsMsgErrorKey = @"ItemsMsgErrorKey";
     [currentParsedCharacterData release];
     [currentParseBatch release];
     [dateFormatter release];
-    [m_currentParse release];
     [super dealloc];
 }
 
@@ -81,32 +80,33 @@ NSString *kItemsMsgErrorKey = @"ItemsMsgErrorKey";
 #pragma mark Parser constants
 
 //解析总数的限制。
-static const const NSUInteger kMaximumNumberOfItemsToParse = 200;
+static const const NSUInteger kMaximumNumberOfItemsToParse = 30;
 
 
-
+//解析多少个为一批传送过去并更新表试图
 static NSUInteger const kSizeOfItemBatch = 10;
 
 // Reduce potential parsing errors by using string constants declared in a single place.
 static NSString * const kEntryElementName = @"entry";
-
-static NSString * const kNameElementName = @"name";
+static NSString * const kNameElementName = @"im:name";
 static NSString * const kTitleElementName = @"title";
 static NSString * const kCategoryElementName = @"category";
-static NSString * const kArtistElementName = @"artist";
-static NSString * const kPriceElementName = @"price";
-static NSString * const kImageElementName = @"image";
+static NSString * const kArtistElementName = @"im:artist";
+static NSString * const kPriceElementName = @"im:price";
+static NSString * const kImageElementName = @"im:image";
+
 //static NSString * const kImageElementName = @"image height=\"60\"";
 
 #pragma mark -
 #pragma mark NSXMLParser delegate methods
 
+//节点开始
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName
   namespaceURI:(NSString *)namespaceURI
  qualifiedName:(NSString *)qName
     attributes:(NSDictionary *)attributeDict {
 
-    
+    accumulatingParsedCharacterData = NO;
     // If the number of parsed earthquakes is greater than
     // kMaximumNumberOfEarthquakesToParse, abort the parse.
     //
@@ -126,10 +126,7 @@ static NSString * const kImageElementName = @"image";
         NSString *categoryValue = [attributeDict valueForKey:@"label"];
         self.currentItemObject.category = categoryValue;
     } 
-    else if ([elementName isEqualToString:kTitleElementName] ||
-             [elementName isEqualToString:kNameElementName] ||
-               [elementName isEqualToString:kArtistElementName] ||
-             [elementName isEqualToString:kPriceElementName]) {
+    else if ([elementName isEqualToString:kTitleElementName] || [elementName isEqualToString:kNameElementName] ||[elementName isEqualToString:kArtistElementName] || [elementName isEqualToString:kPriceElementName]) {
 
         // The contents are collected in parser:foundCharacters:.
         accumulatingParsedCharacterData = YES;
@@ -146,6 +143,7 @@ static NSString * const kImageElementName = @"image";
 
 }
 
+//解析字符串
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
     if (accumulatingParsedCharacterData) {
@@ -153,7 +151,7 @@ static NSString * const kImageElementName = @"image";
     }
 }
 
-
+//一个节点完毕
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName
   namespaceURI:(NSString *)namespaceURI
  qualifiedName:(NSString *)qName {     
@@ -168,22 +166,38 @@ static NSString * const kImageElementName = @"image";
         }
     } 
     else if ([elementName isEqualToString:kNameElementName]) {
-        self.currentItemObject.name = currentParsedCharacterData;
+        NSString *tmpString = [currentParsedCharacterData copy];
+        self.currentItemObject.name = tmpString;
+        [tmpString release];
+//        self.currentItemObject.name = currentParsedCharacterData;
     }
     else if ([elementName isEqualToString:kArtistElementName]) {
-        self.currentItemObject.artist = currentParsedCharacterData;
+        NSString *tmpString = [currentParsedCharacterData copy];
+        self.currentItemObject.artist = tmpString;
+        [tmpString release];
+//        self.currentItemObject.artist = currentParsedCharacterData;
     }
     else if ([elementName isEqualToString:kPriceElementName]) {
-        self.currentItemObject.price = currentParsedCharacterData;
+        NSString *tmpString = [currentParsedCharacterData copy];
+        self.currentItemObject.price = tmpString;
+        [tmpString release];
+//        self.currentItemObject.price = currentParsedCharacterData;
     }
     else if ([elementName isEqualToString:kTitleElementName]) {
-        self.currentItemObject.title = currentParsedCharacterData;
+        NSString *tmpString = [currentParsedCharacterData copy];
+        self.currentItemObject.title = tmpString;
+        [tmpString release];
+//        self.currentItemObject.title = currentParsedCharacterData;
     }
-    else if ([elementName isEqualToString:kImageElementName]) {
-        self.currentItemObject.image = currentParsedCharacterData;
+    else if ([elementName isEqualToString:kImageElementName] && accumulatingParsedCharacterData) {
+        NSString *tmpString = [currentParsedCharacterData copy];
+        self.currentItemObject.image = tmpString;
+        [tmpString release];
+//        self.currentItemObject.image = currentParsedCharacterData;
     }
     // Stop accumulating parsed character data. We won't start again until specific elements begin.
     accumulatingParsedCharacterData = NO;
+    [currentParsedCharacterData setString:@""];
 }
 
 

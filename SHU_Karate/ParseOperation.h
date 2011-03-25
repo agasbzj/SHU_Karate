@@ -31,14 +31,14 @@ extern NSString *kItemsMsgErrorKey;
     BOOL didAbortParsing;
     
     NSUInteger parsedItemsCounter;
-    NSString *m_currentParse;
+
 }
 
 @property (copy, readonly) NSData *itemData;
 @property (nonatomic, retain) OneItem *currentItemObject;
 @property (nonatomic, retain) NSMutableArray *currentParseBatch;
 @property (nonatomic, retain) NSMutableString *currentParsedCharacterData;
-@property (nonatomic, retain) NSString *m_currentParse;
+
 
 
 
