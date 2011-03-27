@@ -20,7 +20,7 @@
 @synthesize parseQueue;
 @synthesize itemList;
 @synthesize dateFormatter;
-
+@synthesize imageDownloadInProgress;
 //static NSUInteger const kItemMax = 300;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +33,7 @@
 
 - (void)dealloc
 {
+    [imageDownloadInProgress release];
     [itemFeedConnection cancel];
     [itemFeedConnection release];
     [tableView release];
@@ -43,6 +44,8 @@
 
 - (void)didReceiveMemoryWarning
 {
+    [itemList release];
+    [imageDownloadInProgress release];
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
@@ -69,7 +72,9 @@
                                 
     self.itemList = [NSMutableArray array];
     [self addObserver:self forKeyPath:@"itemList" options:0 context:NULL];
-    self.tableView.rowHeight = 60;
+    
+    self.tableView.rowHeight = 60;  //行高
+    self.imageDownloadInProgress = [NSMutableDictionary dictionary];    //初始化字典
 
 }
 
@@ -210,37 +215,112 @@
 //
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-	static NSString *cellIdentifier = @"cellIdentifier";    
+	static NSString *cellIdentifier = @"CellIdentifier";
+    static NSString *placeHolderCellIdentifier = @"PlaceHolderCellIdentifier";
+    int nodeCount = [itemList count];
+    if (nodeCount == 0 && indexPath.row == 0) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:placeHolderCellIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:placeHolderCellIdentifier];
+            cell.textLabel.text = @"加载中，请稍候...";
+            cell.selectionStyle = UITableViewCellEditingStyleNone;
+        }
+        return cell;
+    }
   	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 	if (cell == nil) {
         // No reusable cell was available, so we create a new cell and configure its subviews.
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                        reuseIdentifier:cellIdentifier] autorelease];
-
+        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
         
     } 
+    if (nodeCount > 0) {
+        OneItem *item = [itemList objectAtIndex:indexPath.row];
+        cell.textLabel.text = item.name;
+        cell.detailTextLabel.text = item.artist;
+        if (!item.theImage) {
+            
+            if (self.tableView.dragging == NO && self.tableView.decelerating == NO) {
+                [self startImageDownload:item forIndexPath:indexPath];
+            }
+            cell.imageView.image = [UIImage imageNamed:@"Placeholder.png"];
+            
+        }
+        else {
+            cell.imageView.image = item.theImage;
+        }
+    }
     
-    // Get the specific earthquake for this row.
-	OneItem *item = [itemList objectAtIndex:indexPath.row];
-    cell.textLabel.text = item.name;
-    cell.detailTextLabel.text = item.artist;
-    
-    NSURL *url = [NSURL URLWithString:item.image];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    UIImage *image = [[UIImage alloc] initWithData:data];
-    cell.imageView.image = image;
-    [image release];
+
     
 	return cell;
 }
 
-// When the user taps a row in the table, display the USGS web page that displays details of the
-// earthquake they selected.
-//
+
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {	
 
 }
 
+#pragma mark -
+#pragma mark Table cell image support
+
+- (void)startImageDownload:(OneItem *)item forIndexPath:(NSIndexPath *)indexPath {
+    ImageDownloader *imageDownloader = [imageDownloadInProgress objectForKey:indexPath];
+    if (imageDownloader == nil) {
+        imageDownloader = [[ImageDownloader alloc] init];
+        imageDownloader.oneItem = item;
+        imageDownloader.indexPath = indexPath;
+        imageDownloader.delegate = self;
+        [imageDownloadInProgress setObject:imageDownloader forKey:indexPath];
+        [imageDownloader startDownload];
+        [imageDownloader release];
+    }
+}
+
+#pragma mark -
+#pragma mark Deferred image loading (UIScrollViewDelegate)
+
+// Load images for all onscreen rows when scrolling is finished
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (!decelerate)
+	{
+        [self loadImagesForOnscreenRows];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self loadImagesForOnscreenRows];
+}
+
+- (void)loadImagesForOnscreenRows
+{
+    if ([self.itemList count] > 0) {
+        NSArray *visiblePaths = [self.tableView indexPathsForVisibleRows];
+        for (NSIndexPath *indexPath in visiblePaths) {
+            OneItem *oneItem = [self.itemList objectAtIndex:indexPath.row];
+            if (!oneItem.theImage) {
+                [self startImageDownload:oneItem forIndexPath:indexPath];
+            }
+        }
+    }
+}
+// called by our ImageDownloader when an icon is ready to be displayed
+- (void)imageDidLoad:(NSIndexPath *)indexPath
+{
+    ImageDownloader *imageDownloader = [imageDownloadInProgress objectForKey:indexPath];
+    if (imageDownloader != nil)
+    {
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:imageDownloader.indexPath];
+        
+        // Display the newly loaded image
+        cell.imageView.image = imageDownloader.oneItem.theImage;
+    }
+}
 
 #pragma mark -
 #pragma mark KVO support

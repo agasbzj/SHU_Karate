@@ -45,6 +45,8 @@
 		A9978A6C13305938005A54AF /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9978A6B13305938005A54AF /* MainWindow.xib */; };
 		A9978A7813306475005A54AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9978A7713306475005A54AF /* MapKit.framework */; };
 		A9978A8F1330DA94005A54AF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9978A8E1330DA94005A54AF /* CoreData.framework */; };
+		A9C978AB133EE5C600A3395D /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C978AA133EE5C600A3395D /* ImageDownloader.m */; };
+		A9C978AE133EF82500A3395D /* Place_holder.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C978AD133EF82500A3395D /* Place_holder.png */; };
 		A9E527C3132F4C420004B1F0 /* DojoSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E527C1132F4C420004B1F0 /* DojoSelectViewController.m */; };
 		A9E527C4132F4C420004B1F0 /* DojoSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9E527C2132F4C420004B1F0 /* DojoSelectViewController.xib */; };
 		A9E527C8132F56040004B1F0 /* Dojos.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9E527C7132F56040004B1F0 /* Dojos.plist */; };
@@ -127,6 +129,9 @@
 		A9978A7913306B47005A54AF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A9978A8B1330DA6F005A54AF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A9978A8E1330DA94005A54AF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A9C978A9133EE5C600A3395D /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		A9C978AA133EE5C600A3395D /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
+		A9C978AD133EF82500A3395D /* Place_holder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Place_holder.png; sourceTree = "<group>"; };
 		A9E527C0132F4C420004B1F0 /* DojoSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DojoSelectViewController.h; sourceTree = "<group>"; };
 		A9E527C1132F4C420004B1F0 /* DojoSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DojoSelectViewController.m; sourceTree = "<group>"; };
 		A9E527C2132F4C420004B1F0 /* DojoSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DojoSelectViewController.xib; sourceTree = "<group>"; };
@@ -324,6 +329,9 @@
 				A904D0651339DCD400724F4C /* OneItem.m */,
 				A904D0671339E06B00724F4C /* ParseOperation.h */,
 				A904D0681339E06B00724F4C /* ParseOperation.m */,
+				A9C978A9133EE5C600A3395D /* ImageDownloader.h */,
+				A9C978AA133EE5C600A3395D /* ImageDownloader.m */,
+				A9C978AD133EF82500A3395D /* Place_holder.png */,
 			);
 			name = "指南";
 			sourceTree = "<group>";
@@ -448,6 +456,7 @@
 				A914928913335F0B00915408 /* video.png in Resources */,
 				A914928B13335FBD00915408 /* utility.png in Resources */,
 				A904D0621339DC1300724F4C /* UtilityRootViewController.xib in Resources */,
+				A9C978AE133EF82500A3395D /* Place_holder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +505,7 @@
 				A904D0611339DC1300724F4C /* UtilityRootViewController.m in Sources */,
 				A904D0661339DCD400724F4C /* OneItem.m in Sources */,
 				A904D0691339E06B00724F4C /* ParseOperation.m in Sources */,
+				A9C978AB133EE5C600A3395D /* ImageDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

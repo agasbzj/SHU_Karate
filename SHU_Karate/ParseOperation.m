@@ -7,7 +7,7 @@
 //
 
 #import "ParseOperation.h"
-#import "OneItem.h"
+
 NSString *kAddItemsNotif = @"AddItemsNotif";
 NSString *kItemsErrorNotif = @"ItemsErrorNotif";
 NSString *kItemResultsKey = @"ItemResultsKey";

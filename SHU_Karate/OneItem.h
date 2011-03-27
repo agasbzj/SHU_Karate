@@ -16,6 +16,7 @@
     NSString *artist;
     NSString *price;
     NSString *image;
+    UIImage *theImage;
 }
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *title;
@@ -23,4 +24,5 @@
 @property (nonatomic, retain) NSString *artist;
 @property (nonatomic, retain) NSString *price;
 @property (nonatomic, retain) NSString *image;
+@property (nonatomic, retain) UIImage *theImage;
 @end

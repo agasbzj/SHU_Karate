@@ -10,5 +10,16 @@
 
 
 @implementation OneItem
-@synthesize name, title, artist, price, category, image;
+@synthesize name, title, artist, price, category, image, theImage;
+
+- (void)dealloc{
+    [name release];
+    [title release];
+    [artist release];
+    [price release];
+    [category release];
+    [image release];
+    [theImage release];
+    [super dealloc];
+}
 @end
